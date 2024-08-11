@@ -11,7 +11,7 @@ const props = defineProps(["data"]);
 
           <div class="card__data">
             <div class="card__info">
-              <img id="dividers" src="/divi.webp" alt="" />
+
               <h2>{{ data.nome }}</h2>
               <p style="color: rgba(0, 0, 0, 0.596)">{{ data.descricao }}</p>
             </div>
@@ -41,14 +41,17 @@ p {
   max-width: 375px;
   margin: 0 auto;
 }
+
 .grid {
   display: grid;
   grid-template: 1fr / repeat(0, 1fr);
 }
+
 .card {
   width: 180px;
   margin: 55px auto;
 }
+
 .card__image {
   position: absolute;
   width: 346px;
@@ -62,29 +65,33 @@ p {
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
   margin-top: -88px;
 }
+
 .card__data {
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #fdd426;
+  background-color: #F25430;
   padding-top: calc(100% * 1.18);
   transition: all 0.3s ease-out 0.1s;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .card__info {
   text-align: center;
   padding: 0 10px;
   margin-bottom: 10px;
 }
+
 .card__info h2 {
   font-size: 16px;
   font-family: Barlow-Black;
   font-weight: 800;
   color: #141414;
 }
+
 .card__info p {
   margin-top: 5px;
   font-family: Barlow-SemiBold;
@@ -92,10 +99,12 @@ p {
   line-height: 14px;
   color: #ffffff;
 }
+
 .card__action {
   display: grid;
   grid-template: 30px / 1fr 35px;
 }
+
 .card__price {
   padding: 0 20px 0 30px;
   font-size: 14px;
@@ -105,6 +114,7 @@ p {
 
   font-family: Barlow-Black;
 }
+
 .card__add {
   width: 140px;
   height: 30px;
@@ -124,11 +134,13 @@ p {
     -moz-transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -140,22 +152,27 @@ img.vert-move {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
 }
+
 img.vert-move {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
 }
+
 @-webkit-keyframes mover {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-10px);
   }
 }
+
 @keyframes mover {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-10px);
   }

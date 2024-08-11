@@ -1,66 +1,74 @@
 <script>
-import { ref, watch, onUpdated } from "vue"
-import { carrinhoStore } from "../store/produtos"
-import { useToast } from "vue-toastification"
-import router from "../router/index"
+import { ref, watch, onUpdated } from "vue";
+import { carrinhoStore } from "../store/produtos";
+import { useToast } from "vue-toastification";
+import router from "../router/index";
 
 export default {
   setup() {
-    const toast = useToast()
+    const toast = useToast();
 
-    const carrinho = carrinhoStore()
+    const carrinho = carrinhoStore();
 
-    const Macarronada = ref({
-      macarrao: [{ nome: "Macarrão Talharim", quantidade: 1, preco: 15 }],
-      carnes: [
-        { nome: "Carne Moída", quantidade: 0, preco: 0 },
-        { nome: "Frango", quantidade: 0, preco: 0 },
+    const Burger = ref({
+      "Pao": [
+        {
+          "nome": "Misturadão", "preco": 13.00, "quantidade": 0, "descricao": "CARNE DE SOL DESFIADA, BACON, CALABRESA, TOMATE, CEBOLA E CHEIRO VERDE.",
+        },
       ],
-      ingredientes: [
-        { nome: "Molho Rosê", quantidade: 0, preco: 0 },
-        { nome: "Bacon", quantidade: 0, preco: 0 },
-        { nome: "Mussarela", quantidade: 0, preco: 0 },
-        //{ nome: "Azeitona", quantidade: 0, preco: 0 },
-        { nome: "Milho Verde", quantidade: 0, preco: 0 },
-        { nome: "Orégano", quantidade: 0, preco: 0 },
+      "Adicionais": [
+        { "nome": "Filé de Frango Trinchado", "preco": 4.00, "quantidade": 0 },
+        { "nome": "Calabresa", "preco": 2.00, "quantidade": 0 },
+        { "nome": "Boi Trinchado", "preco": 8.00, "quantidade": 0 },
+        { "nome": "Presunto Peru", "preco": 2.00, "quantidade": 0 },
+        { "nome": "Carne de Sol Desfiada", "preco": 5.00, "quantidade": 0 },
+        { "nome": "Batata Palha", "preco": 1.50, "quantidade": 0 },
+        { "nome": "Queijo Mussarela", "preco": 2.00, "quantidade": 0 },
+        { "nome": "Milho Verde", "preco": 1.00, "quantidade": 0 },
+        { "nome": "Queijo Cheddar", "preco": 2.50, "quantidade": 0 },
+        { "nome": "Queijo Coalho", "preco": 2.00, "quantidade": 0 },
+        { "nome": "Bacon", "preco": 2.00, "quantidade": 0 }
       ],
-    })
+
+    });
 
     function salvarPedido() {
-      carrinho.macarronadas.push(Macarronada.value)
+      console.log(Burger.value);
 
-      router.push("/")
+      carrinho.burgers.push(Burger.value);
+
+      router.push("/");
 
       toast.success("Adicionado com sucesso!", {
         timeout: 2000,
         position: "top-right",
         icon: false,
         showCloseButtonOnHover: true,
-      })
+      });
     }
 
     function voltar() {
-      router.push("/")
+      router.push("/");
     }
 
     function updateQuantities(selectedItem) {
-      this.Macarronada.carnes.forEach((item) => {
+      this.Burger.Pao.forEach((item) => {
         if (item === selectedItem) {
-          item.quantidade = 1
+          item.quantidade = 1;
         } else {
-          item.quantidade = 0
+          item.quantidade = 0;
         }
-      })
+      });
     }
 
     return {
-      Macarronada,
+      Burger,
       salvarPedido,
       updateQuantities,
       voltar,
-    }
+    };
   },
-}
+};
 </script>
 
 <template>
@@ -68,44 +76,23 @@ export default {
     <div id="listar">
       <div class="dotted-line">
         <hr />
-        <span id="textDividers">Macarronada</span>
+        <span id="textDividers">CUSCUZ RECHEADO</span>
         <hr />
       </div>
-      <div v-for="(item, index) in Macarronada.macarrao" :key="item">
-        <label style="pointer-events: none" id="nomeItem" for="adicional">
-          {{ item.nome }}</label
-        >
-        <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
-        <p id="itens"></p>
-        <br />
-      </div>
-      <div class="dotted-line">
-        <hr />
-        <span id="textDividers">Carnes</span>
-        <hr />
-      </div>
-      <div v-for="(item, index) in Macarronada.carnes" :key="item">
-        <button
-          class="botao1"
-          @click="item.quantidade++, updateQuantities(item)"
-        >
+      <div v-for="(item, index) in Burger.Pao" :key="item">
+        <button class="botao1" @click="item.quantidade++, updateQuantities(item)">
           +
         </button>
 
-        <button
-          v-if="item.quantidade > 0"
-          class="botao2"
-          @click="item.quantidade--"
-        >
+        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"
-          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-          {{ item.nome }}</label
-        >
+        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
+            }}x</span>
+          {{ item.nome }}</label>
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
-        <p id="itens"></p>
+        <p id="itens">{{ item.descricao }}</p>
         <br />
       </div>
       <div class="dotted-line">
@@ -113,30 +100,23 @@ export default {
         <span id="textDividers">Adicionais</span>
         <hr />
       </div>
-      <br />
-      <div v-for="(item, index) in Macarronada.ingredientes" :key="item">
-        <button
-          class="botao1"
-          @click="item.quantidade <= 0 ? item.quantidade++ : 0"
-        >
-          +
-        </button>
+      <div v-for="(item, index) in Burger.Adicionais" :key="item">
+        <button class="botao1" @click="item.quantidade++">+</button>
 
-        <button
-          v-if="item.quantidade > 0"
-          class="botao2"
-          @click="item.quantidade--"
-        >
+        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
           -
         </button>
-        <label style="pointer-events: none" id="nomeItem" for="adicional"
-          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-          {{ item.nome }}</label
-        >
+
+        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
+            }}x</span>
+          {{ item.nome }}</label>
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
       </div>
+
+      <!---------------------------->
+
 
       <button @click="salvarPedido" id="butOpcoes" type="submit" value="Submit">
         adicionar
@@ -155,18 +135,21 @@ export default {
   margin-bottom: 20px;
   height: 60px;
 }
+
 #quantidadeDiv {
   font-weight: bold;
-  color: #fdd426;
+  color: #F25430;
   font-size: 20px;
 }
 
 #textDividers {
-  color: #fdd426;
-  font-family: "Great Vibes";
+  color: #F25430;
+  font-family: "Harrison-Rough";
   font-size: 40px;
   font-weight: lighter;
+  text-transform: uppercase;
 }
+
 .dotted-line {
   display: flex;
   align-items: center;
@@ -188,7 +171,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -203,7 +186,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -221,6 +204,7 @@ export default {
   font-size: 16px;
   margin-left: 7px;
 }
+
 #tituloRadio {
   display: flex;
   align-items: center;

@@ -36,7 +36,7 @@ export default {
       var dados = this.carrinho.burgers;
 
       if (dados.length > 0) {
-        this.pedidoMontado += "*Burger*\n\n";
+        //this.pedidoMontado += "*Burger*\n\n";
 
         const resultado = dados
           .map((categoria) => {
@@ -73,7 +73,7 @@ export default {
       var dados2 = this.carrinho.macarronadas;
 
       if (dados2.length > 0) {
-        this.pedidoMontado += "\n*Macarronada*\n\n";
+        //this.pedidoMontado += "\n*Macarronada*\n\n";
 
         const resultado2 = dados2
           .map((categoria) => {
@@ -104,7 +104,7 @@ export default {
       var dados3 = this.carrinho.batatas;
 
       if (dados3.length > 0) {
-        this.pedidoMontado += "\n*Batata Frita*\n\n";
+        //this.pedidoMontado += "\n*Batata Frita*\n\n";
 
         const resultado3 = dados3
           .map((categoria) => {
@@ -135,7 +135,7 @@ export default {
       var dados6 = this.carrinho.sobremesas;
 
       if (dados6.length > 0) {
-        this.pedidoMontado += "\n*Sobremesas*\n\n";
+        //this.pedidoMontado += "\n*Sobremesas*\n\n";
 
         const resultado6 = dados6
           .map((categoria) => {
@@ -166,7 +166,7 @@ export default {
       var dados4 = this.carrinho.bebidas;
 
       if (dados4.length > 0) {
-        this.pedidoMontado += "\n*Bebidas*\n\n";
+        //this.pedidoMontado += "\n*Bebidas*\n\n";
 
         const resultado4 = dados4
           .map((categoria) => {
@@ -201,7 +201,7 @@ export default {
       var dados5 = this.carrinho.combos;
 
       if (dados5.length > 0) {
-        this.pedidoMontado += "\n*Combo*\n\n";
+        //this.pedidoMontado += "\n*Combo*\n\n";
 
         const resultado5 = dados5
           .map((categoria) => {
@@ -321,13 +321,8 @@ export default {
       </div>
       <div class="payment-container">
         <div class="price-card">
-          <input
-            v-model="carrinho.dadosPessoais.formaDeEntrega"
-            value="Vou buscar"
-            type="radio"
-            name="Vou buscar"
-            id="Vou buscar"
-          />
+          <input v-model="carrinho.dadosPessoais.formaDeEntrega" value="Vou buscar" type="radio" name="Vou buscar"
+            id="Vou buscar" />
           <div class="content">
             Vou buscar
             <span>grátis</span>
@@ -335,13 +330,8 @@ export default {
           <label for="Vou buscar"></label>
         </div>
         <div class="price-card">
-          <input
-            v-model="carrinho.dadosPessoais.formaDeEntrega"
-            value="Quero entrega"
-            name="Quero entrega"
-            type="radio"
-            id="Quero entrega"
-          />
+          <input v-model="carrinho.dadosPessoais.formaDeEntrega" value="Quero entrega" name="Quero entrega" type="radio"
+            id="Quero entrega" />
           <div class="content">
             Quero entega
             <span>taxa de entrega</span>
@@ -356,12 +346,7 @@ export default {
             <h3>Seu Nome:</h3>
           </div>
           <div class="input-field">
-            <input
-              v-model="carrinho.dadosPessoais.nome"
-              type="text"
-              id="card_number"
-              placeholder=""
-            />
+            <input v-model="carrinho.dadosPessoais.nome" type="text" id="card_number" placeholder="" />
           </div>
           <br />
         </div>
@@ -371,24 +356,14 @@ export default {
             <h3>Seu Nome:</h3>
           </div>
           <div class="input-field">
-            <input
-              v-model="carrinho.dadosPessoais.nome"
-              type="text"
-              id="card_number"
-              placeholder=""
-            />
+            <input v-model="carrinho.dadosPessoais.nome" type="text" id="card_number" placeholder="" />
           </div>
           <br />
           <div class="info">
             <h3>Rua:</h3>
           </div>
           <div class="input-field">
-            <input
-              v-model="carrinho.dadosPessoais.rua"
-              type="text"
-              id="card_number"
-              placeholder=""
-            />
+            <input v-model="carrinho.dadosPessoais.rua" type="text" id="card_number" placeholder="" />
           </div>
           <br />
           <div class="info">
@@ -396,12 +371,7 @@ export default {
           </div>
 
           <div class="input-field">
-            <input
-              v-model="carrinho.dadosPessoais.bairro"
-              type="text"
-              id="card_number"
-              placeholder=""
-            />
+            <input v-model="carrinho.dadosPessoais.bairro" type="text" id="card_number" placeholder="" />
           </div>
 
           <br />
@@ -409,24 +379,14 @@ export default {
             <h3>Número da Casa:</h3>
           </div>
           <div class="input-field">
-            <input
-              v-model="carrinho.dadosPessoais.numero"
-              type="number"
-              id="card_number"
-              placeholder=""
-            />
+            <input v-model="carrinho.dadosPessoais.numero" type="number" id="card_number" placeholder="" />
           </div>
           <br />
           <div class="info">
             <h3>Ponto de Referência:</h3>
           </div>
           <div class="input-field">
-            <input
-              v-model="carrinho.dadosPessoais.referencia"
-              type="text"
-              id="card_number"
-              placeholder=""
-            />
+            <input v-model="carrinho.dadosPessoais.referencia" type="text" id="card_number" placeholder="" />
           </div>
           <br />
         </div>
@@ -435,62 +395,33 @@ export default {
         </div>
         <div class="payment-container">
           <div class="price-card">
-            <input
-              v-model="carrinho.dadosPessoais.formaDePagamento"
-              value="Pix"
-              name="price"
-              type="radio"
-              id="pix"
-            />
+            <input v-model="carrinho.dadosPessoais.formaDePagamento" value="Pix" name="price" type="radio" id="pix" />
             <div class="content">PIX</div>
             <label for="pix"></label>
           </div>
           <div class="price-card">
-            <input
-              v-model="carrinho.dadosPessoais.formaDePagamento"
-              value="Cartão"
-              name="price"
-              type="radio"
-              id="cartao"
-            />
+            <input v-model="carrinho.dadosPessoais.formaDePagamento" value="Cartão" name="price" type="radio"
+              id="cartao" />
             <div class="content">Cartão</div>
             <label for="cartao"></label>
           </div>
           <div class="price-card">
-            <input
-              v-model="carrinho.dadosPessoais.formaDePagamento"
-              value="Dinheiro"
-              name="price"
-              type="radio"
-              id="dinheiro"
-            />
+            <input v-model="carrinho.dadosPessoais.formaDePagamento" value="Dinheiro" name="price" type="radio"
+              id="dinheiro" />
             <div class="content">Dinheiro</div>
             <label for="dinheiro"></label>
           </div>
         </div>
         <br />
-        <div
-          v-if="carrinho.dadosPessoais.formaDePagamento == 'Pix'"
-          class="input-field"
-        >
+        <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Pix'" class="input-field">
           <button id="butCopiarPix" @click="copyToClipboard">Copiar PIX</button>
         </div>
-        <div
-          v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'"
-          class="info"
-        >
+        <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'" class="info">
           <h3>Troco?</h3>
         </div>
-        <div
-          v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'"
-          class="input-field"
-        >
-          <input
-            v-model="carrinho.dadosPessoais.troco"
-            type="number"
-            id="card_number"
-            placeholder="troco para 50 reais"
-          />
+        <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'" class="input-field">
+          <input v-model="carrinho.dadosPessoais.troco" type="number" id="card_number"
+            placeholder="troco para 50 reais" />
         </div>
         <p id="textDescritivo">
           Caso tenha escolhido entrega, o valor<br />
@@ -520,6 +451,7 @@ export default {
 #formaDePagamento {
   display: flex;
 }
+
 .container {
   display: flex;
   align-items: center;
@@ -527,6 +459,7 @@ export default {
   margin: 0 auto;
   margin-bottom: 45px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -534,6 +467,7 @@ export default {
   font-size: 100%;
   font-family: Barlow-SemiBold;
 }
+
 .checkout-card {
   background: #fff;
   max-width: 450px;
@@ -542,15 +476,18 @@ export default {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .checkout-card .title span {
-  color: #fdd426;
+  color: #F25430;
 }
+
 .checkout-card .title p {
   font-size: 1.3rem;
   font-family: Barlow-SemiBold;
   text-align: center;
   padding: 1rem;
 }
+
 .price-container {
   display: flex;
   gap: 0.95rem;
@@ -562,6 +499,7 @@ export default {
   gap: 0.3rem;
   justify-content: space-evenly;
 }
+
 .price-card {
   position: relative;
   /*   border:1px solid #bcbcbc; */
@@ -575,6 +513,7 @@ export default {
   outline: none;
   transition: 0.3s ease-in;
 }
+
 .price-card label {
   position: absolute;
   top: 0;
@@ -586,62 +525,75 @@ export default {
   border: 1px solid #bcbcbc;
   cursor: pointer;
 }
-.price-card input[type="radio"]:checked ~ label {
-  border: 1px solid #fdd426;
+
+.price-card input[type="radio"]:checked~label {
+  border: 1px solid #F25430;
   background: #e4ec0d23;
-  color: #fdd426;
+  color: #F25430;
   outline: none;
   border-width: 2px;
 }
+
 .price-card input[type="radio"] {
   width: 30px;
   height: auto;
   border: 0;
 
-  accent-color: #fdd426;
+  accent-color: #F25430;
   transform: scale(1.5);
 }
+
 .price-card .content {
   display: flex;
   flex-direction: column;
 }
+
 .price-card .content span {
   font-size: 0.7rem;
   font-family: Barlow-SemiBold;
 }
+
 .detail-info {
   padding-top: 2rem;
 }
+
 .info {
   margin-bottom: 10px;
 }
+
 .info h3 {
   letter-spacing: 1px;
 }
+
 .info small {
   font-size: 0.74rem;
   font-family: Barlow-SemiBold;
 }
+
 .input-field {
   display: flex;
   flex-direction: column;
 }
+
 .input-field label {
   font-size: 0.7rem;
   font-family: Barlow-SemiBold;
   padding-bottom: 5px;
   font-weight: 500;
 }
+
 .input-field input {
   padding: 0.75rem;
   border-radius: 3px;
   width: 100%;
   border: 1px solid #9ea0a9;
 }
+
 .input-field input:focus {
-  border: 1px solid #fdd426;
+  border: 1px solid #F25430;
   outline: none;
 }
+
 .grid {
   display: flex;
   gap: 10px;
@@ -655,13 +607,14 @@ export default {
   text-align: center;
   margin-top: 1.8rem;
 }
+
 .btn {
   font-size: 13px;
   margin-top: 0.7rem;
   width: 100%;
   padding: 1rem;
   letter-spacing: 0.8px;
-  background: #fdd426;
+  background: #F25430;
   border: none;
   color: #fff;
   border-radius: 3px;

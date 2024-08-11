@@ -46,7 +46,7 @@ export default {
   height: 40px;
   bottom: 40px;
   right: 40px;
-  background-color: #fdd426;
+  background-color: #F25430;
   color: #000000;
   border-radius: 50px;
   z-index: 30;
@@ -69,7 +69,7 @@ export default {
   background-color: #141414;
   border-width: 2px;
   border-style: solid;
-  border-color: #fdd426;
+  border-color: #F25430;
   border-radius: 50px;
   z-index: 30;
   display: flex;
@@ -95,7 +95,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #fdd426;
+  background-color: #F25430;
   color: rgb(0, 0, 0);
   font-family: Barlow-SemiBold;
   font-size: 15px;

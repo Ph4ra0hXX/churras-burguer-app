@@ -14,7 +14,6 @@ export default {
     const macarronadas = ref([...carrinho.macarronadas]);
     const batatas = ref([...carrinho.batatas]);
     const combos = ref([...carrinho.combos]);
-
     const bebidas = ref([...carrinho.bebidas]);
 
     const pedidos = ref([
@@ -271,18 +270,12 @@ export default {
     <div class="paypal__subheader-wrapper">
       <div class="paypal__subheader">
         <h1 class="paypal__username">Olá 👋</h1>
-        <span class="paypal__help-text"
-          >Você selecionou {{ carrinho.getTotalPedidos }} item!</span
-        >
+        <span class="paypal__help-text">Você selecionou {{ carrinho.getTotalPedidos }} item!</span>
       </div>
     </div>
     <div class="paypal__cart">
       <hr />
-      <div
-        id="pedidoFundo"
-        v-for="(pedido, pedidoIndex) in carrinho.burgers"
-        :key="pedidoIndex"
-      >
+      <div id="pedidoFundo" v-for="(pedido, pedidoIndex) in carrinho.burgers" :key="pedidoIndex">
         <!-- <p id="posicaoPedido">Pedido N° {{ pedidoIndex + 1 }}</p>-->
 
         <div v-for="(secaoItens, secao) in pedido" :key="secao">
@@ -296,21 +289,15 @@ export default {
                   </div>
                 </div>
                 <div>
-                  <button
-                    @click="
-                      aumentarQuantidadeBurgers(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao1"
-                  >
+                  <button @click="
+                    aumentarQuantidadeBurgers(pedidoIndex, secao, itemIndex)
+                    " class="botao1">
                     +
                   </button>
 
-                  <button
-                    @click="
-                      diminuirQuantidadeBurgers(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao2"
-                  >
+                  <button @click="
+                    diminuirQuantidadeBurgers(pedidoIndex, secao, itemIndex)
+                    " class="botao2">
                     -
                   </button>
                 </div>
@@ -327,11 +314,7 @@ export default {
         <br />
         <hr />
       </div>
-      <div
-        id="pedidoFundo"
-        v-for="(pedido, pedidoIndex) in carrinho.macarronadas"
-        :key="pedidoIndex"
-      >
+      <div id="pedidoFundo" v-for="(pedido, pedidoIndex) in carrinho.macarronadas" :key="pedidoIndex">
         <!-- <p id="posicaoPedido">Pedido N° {{ pedidoIndex + 1 }}</p>-->
 
         <div v-for="(secaoItens, secao) in pedido" :key="secao">
@@ -345,29 +328,23 @@ export default {
                   </div>
                 </div>
                 <div>
-                  <button
-                    @click="
-                      aumentarQuantidadeMacarronada(
-                        pedidoIndex,
-                        secao,
-                        itemIndex
-                      )
-                    "
-                    class="botao1"
-                  >
+                  <button @click="
+                    aumentarQuantidadeMacarronada(
+                      pedidoIndex,
+                      secao,
+                      itemIndex
+                    )
+                    " class="botao1">
                     +
                   </button>
 
-                  <button
-                    @click="
-                      diminuirQuantidadeMacarronada(
-                        pedidoIndex,
-                        secao,
-                        itemIndex
-                      )
-                    "
-                    class="botao2"
-                  >
+                  <button @click="
+                    diminuirQuantidadeMacarronada(
+                      pedidoIndex,
+                      secao,
+                      itemIndex
+                    )
+                    " class="botao2">
                     -
                   </button>
                 </div>
@@ -384,11 +361,7 @@ export default {
         <br />
         <hr />
       </div>
-      <div
-        id="pedidoFundo"
-        v-for="(pedido, pedidoIndex) in carrinho.batatas"
-        :key="pedidoIndex"
-      >
+      <div id="pedidoFundo" v-for="(pedido, pedidoIndex) in carrinho.batatas" :key="pedidoIndex">
         <!-- <p id="posicaoPedido">Pedido N° {{ pedidoIndex + 1 }}</p>-->
 
         <div v-for="(secaoItens, secao) in pedido" :key="secao">
@@ -402,21 +375,15 @@ export default {
                   </div>
                 </div>
                 <div>
-                  <button
-                    @click="
-                      aumentarQuantidadeBatata(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao1"
-                  >
+                  <button @click="
+                    aumentarQuantidadeBatata(pedidoIndex, secao, itemIndex)
+                    " class="botao1">
                     +
                   </button>
 
-                  <button
-                    @click="
-                      diminuirQuantidadeBatata(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao2"
-                  >
+                  <button @click="
+                    diminuirQuantidadeBatata(pedidoIndex, secao, itemIndex)
+                    " class="botao2">
                     -
                   </button>
                 </div>
@@ -433,11 +400,7 @@ export default {
         <br />
         <hr />
       </div>
-      <div
-        id="pedidoFundo"
-        v-for="(pedido, pedidoIndex) in carrinho.combos"
-        :key="pedidoIndex"
-      >
+      <div id="pedidoFundo" v-for="(pedido, pedidoIndex) in carrinho.combos" :key="pedidoIndex">
         <!-- <p id="posicaoPedido">Pedido N° {{ pedidoIndex + 1 }}</p>-->
 
         <div v-for="(secaoItens, secao) in pedido" :key="secao">
@@ -451,21 +414,15 @@ export default {
                   </div>
                 </div>
                 <div>
-                  <button
-                    @click="
-                      aumentarQuantidadeCombo(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao1"
-                  >
+                  <button @click="
+                    aumentarQuantidadeCombo(pedidoIndex, secao, itemIndex)
+                    " class="botao1">
                     +
                   </button>
 
-                  <button
-                    @click="
-                      diminuirQuantidadeCombo(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao2"
-                  >
+                  <button @click="
+                    diminuirQuantidadeCombo(pedidoIndex, secao, itemIndex)
+                    " class="botao2">
                     -
                   </button>
                 </div>
@@ -482,11 +439,7 @@ export default {
         <br />
         <hr />
       </div>
-      <div
-        id="pedidoFundo"
-        v-for="(pedido, pedidoIndex) in carrinho.sobremesas"
-        :key="pedidoIndex"
-      >
+      <div id="pedidoFundo" v-for="(pedido, pedidoIndex) in carrinho.sobremesas" :key="pedidoIndex">
         <!-- <p id="posicaoPedido">Pedido N° {{ pedidoIndex + 1 }}</p>-->
 
         <div v-for="(secaoItens, secao) in pedido" :key="secao">
@@ -500,21 +453,15 @@ export default {
                   </div>
                 </div>
                 <div>
-                  <button
-                    @click="
-                      aumentarQuantidadeSobremesa(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao1"
-                  >
+                  <button @click="
+                    aumentarQuantidadeSobremesa(pedidoIndex, secao, itemIndex)
+                    " class="botao1">
                     +
                   </button>
 
-                  <button
-                    @click="
-                      diminuirQuantidadeSobremesa(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao2"
-                  >
+                  <button @click="
+                    diminuirQuantidadeSobremesa(pedidoIndex, secao, itemIndex)
+                    " class="botao2">
                     -
                   </button>
                 </div>
@@ -531,11 +478,7 @@ export default {
         <br />
         <hr />
       </div>
-      <div
-        id="pedidoFundo"
-        v-for="(pedido, pedidoIndex) in carrinho.bebidas"
-        :key="pedidoIndex"
-      >
+      <div id="pedidoFundo" v-for="(pedido, pedidoIndex) in carrinho.bebidas" :key="pedidoIndex">
         <!-- <p id="posicaoPedido">Pedido N° {{ pedidoIndex + 1 }}</p>-->
 
         <div v-for="(secaoItens, secao) in pedido" :key="secao">
@@ -549,21 +492,15 @@ export default {
                   </div>
                 </div>
                 <div>
-                  <button
-                    @click="
-                      aumentarQuantidadeBebida(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao1"
-                  >
+                  <button @click="
+                    aumentarQuantidadeBebida(pedidoIndex, secao, itemIndex)
+                    " class="botao1">
                     +
                   </button>
 
-                  <button
-                    @click="
-                      diminuirQuantidadeBebida(pedidoIndex, secao, itemIndex)
-                    "
-                    class="botao2"
-                  >
+                  <button @click="
+                    diminuirQuantidadeBebida(pedidoIndex, secao, itemIndex)
+                    " class="botao2">
                     -
                   </button>
                 </div>
@@ -588,12 +525,7 @@ export default {
         <br />
 
         <div class="input-field">
-          <textarea
-            v-model="carrinho.observacao"
-            type="text"
-            id=""
-            placeholder="Observações"
-          ></textarea>
+          <textarea v-model="carrinho.observacao" type="text" id="" placeholder="Observações"></textarea>
         </div>
       </div>
 
@@ -659,7 +591,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -674,7 +606,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -687,30 +619,36 @@ export default {
   width: 35px;
   margin-left: 2px;
 }
+
 #quantidadeDePedidos {
   color: #000000;
   font-size: 22px;
 }
+
 .input-field {
   display: flex;
   flex-direction: column;
   margin-right: 6px;
 }
+
 .input-field label {
   font-size: 0.7rem;
   font-family: Barlow-SemiBold;
   padding-bottom: 5px;
   font-weight: 500;
 }
+
 .input-field input {
   border-radius: 3px;
   width: 100%;
   border: 1px solid #9ea0a9;
 }
+
 .input-field input:focus {
   border: 1px solid #f27141;
   outline: none;
 }
+
 textarea {
   margin: 0px auto;
   width: 100%;
@@ -765,7 +703,7 @@ textarea {
   width: 100%;
   padding: 1rem;
   letter-spacing: 0.8px;
-  background: #fdd426;
+  background: #F25430;
   border: none;
   color: #fff;
   border-radius: 3px;
@@ -773,11 +711,13 @@ textarea {
   transition: 0.2s ease-in-out;
   font-family: Barlow-SemiBold;
 }
+
 .btn:hover {
-  background: #fdd426;
+  background: #F25430;
   letter-spacing: 1px;
   box-shadow: 1px 4px 8px rgba(242, 113, 65, 0.2);
 }
+
 .inspired-by {
   display: block;
   position: relative;
@@ -853,7 +793,7 @@ textarea {
 
 .paypal__subheader {
   padding: 0 45px 0 40px;
-  border-left: 5px solid #fdd426;
+  border-left: 5px solid #F25430;
 }
 
 .paypal__username {

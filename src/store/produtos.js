@@ -65,13 +65,6 @@ export const produtosStore = defineStore("produto", {
   state: () => {
     return {
       cardDataStore: [
-        /* {
-          id: 8,
-          nome: "COMBO",
-          img: "food6.webp",
-          descricao: "Combo Completo",
-          url: "/combo",
-        },*/
         {
           id: 1,
           nome: "BURGER",
@@ -79,16 +72,30 @@ export const produtosStore = defineStore("produto", {
           descricao: "Monte do seu jeito",
           url: "/burger",
         },
-        /*{
+        {
+          id: 8,
+          nome: "CUSCUZ RECHEADO",
+          img: "food3.webp",
+          descricao: "No ponto certo",
+          url: "/combo",
+        },
+        {
+          id: 2,
+          nome: "CUSCUZ RECHEADO",
+          img: "food2.webp",
+          descricao: "Monte do seu jeito",
+          url: "/macarronada",
+        },
+        {
           id: 6,
-          nome: "BATATA FRITA",
+          nome: "VATAPÁ",
           img: "food3.webp",
           descricao: "No ponto certo",
           url: "/batata",
-        },*/
+        },
         {
           id: 7,
-          nome: "SOBREMESAS",
+          nome: "BURGERS JÁ MONTADOS",
           img: "food5.webp",
           descricao: "Para adoçar",
           url: "/sobremesas",
@@ -99,6 +106,13 @@ export const produtosStore = defineStore("produto", {
           img: "food4.webp",
           descricao: "Refrescantes",
           url: "/bebidas",
+        },
+        {
+          id: 9,
+          nome: "SOPAS",
+          img: "food4.webp",
+          descricao: "Refrescantes",
+          url: "/sopas",
         },
       ],
     };
@@ -109,13 +123,6 @@ export const produtosStore2 = defineStore("produto2", {
   state: () => {
     return {
       cardDataStore: [
-        /*{
-          id: 8,
-          nome: "COMBO",
-          img: "food6.webp",
-          descricao: "Combo Completo",
-          url: "/combo",
-        },*/
         {
           id: 1,
           nome: "BURGER",
@@ -123,23 +130,30 @@ export const produtosStore2 = defineStore("produto2", {
           descricao: "Monte do seu jeito",
           url: "/burger",
         },
-         {
+        {
+          id: 8,
+          nome: "CUSCUZ RECHEADO",
+          img: "food3.webp",
+          descricao: "No ponto certo",
+          url: "/combo",
+        },
+        {
           id: 2,
-          nome: "MACARONADA",
+          nome: "CUSCUZ RECHEADO",
           img: "food2.webp",
           descricao: "Monte do seu jeito",
           url: "/macarronada",
         },
-        /*{
+        {
           id: 6,
-          nome: "BATATA FRITA",
+          nome: "VATAPÁ",
           img: "food3.webp",
           descricao: "No ponto certo",
           url: "/batata",
-        },*/
+        },
         {
           id: 7,
-          nome: "SOBREMESAS",
+          nome: "BURGERS JÁ MONTADOS",
           img: "food5.webp",
           descricao: "Para adoçar",
           url: "/sobremesas",
@@ -150,6 +164,13 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food4.webp",
           descricao: "Refrescantes",
           url: "/bebidas",
+        },
+        {
+          id: 9,
+          nome: "SOPAS",
+          img: "food4.webp",
+          descricao: "Refrescantes",
+          url: "/sopas",
         },
       ],
     };

@@ -10,12 +10,19 @@ export default {
 
     const carrinho = carrinhoStore();
 
-    const Batata = ref({
-      batataFrita: [{ nome: "Batata 300g", preco: 7.0, quantidade: 0 }],
+    const Burger = ref({
+      "Pao": [
+        {
+          "nome": "Vatapá de Frango", "preco": 10.00, "quantidade": 0, "descricao": "ARROZ, PAÇOCA.",
+        },
+
+      ],
     });
 
     function salvarPedido() {
-      carrinho.batatas.push(Batata.value);
+      console.log(Burger.value);
+
+      carrinho.burgers.push(Burger.value);
 
       router.push("/");
 
@@ -31,9 +38,20 @@ export default {
       router.push("/");
     }
 
+    function updateQuantities(selectedItem) {
+      this.Burger.Pao.forEach((item) => {
+        if (item === selectedItem) {
+          item.quantidade = 1;
+        } else {
+          item.quantidade = 0;
+        }
+      });
+    }
+
     return {
-      Batata,
+      Burger,
       salvarPedido,
+      updateQuantities,
       voltar,
     };
   },
@@ -45,30 +63,29 @@ export default {
     <div id="listar">
       <div class="dotted-line">
         <hr />
-        <span id="textDividers">Batata Frita</span>
+        <span id="textDividers">PRATINHO COMPLETO
+        </span>
         <hr />
       </div>
-      <div v-for="(item, index) in Batata.batataFrita" :key="item">
-        <button class="botao1" @click="item.quantidade++">+</button>
+      <div v-for="(item, index) in Burger.Pao" :key="item">
+        <button class="botao1" @click="item.quantidade++, updateQuantities(item)">
+          +
+        </button>
 
-        <button
-          v-if="item.quantidade > 0"
-          class="botao2"
-          @click="item.quantidade--"
-        >
+        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"
-          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-          {{ item.nome }}</label
-        >
+        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
+            }}x</span>
+          {{ item.nome }}</label>
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
-        <p id="itens"></p>
+        <p id="itens">{{ item.descricao }}</p>
         <br />
       </div>
 
       <!---------------------------->
+
 
       <button @click="salvarPedido" id="butOpcoes" type="submit" value="Submit">
         adicionar
@@ -87,18 +104,21 @@ export default {
   margin-bottom: 20px;
   height: 60px;
 }
+
 #quantidadeDiv {
   font-weight: bold;
-  color: #fdd426;
+  color: #F25430;
   font-size: 20px;
 }
 
 #textDividers {
-  color: #fdd426;
-  font-family: "Great Vibes";
+  color: #F25430;
+  font-family: "Harrison-Rough";
   font-size: 40px;
   font-weight: lighter;
+  text-transform: uppercase;
 }
+
 .dotted-line {
   display: flex;
   align-items: center;
@@ -120,7 +140,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -135,7 +155,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -153,6 +173,7 @@ export default {
   font-size: 16px;
   margin-left: 7px;
 }
+
 #tituloRadio {
   display: flex;
   align-items: center;

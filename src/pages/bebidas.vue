@@ -12,28 +12,56 @@ export default {
 
     const Bebidas = ref({
       tipos: [
-        { nome: "Coca Litro", quantidade: 0, preco: 8.0 },
-        { nome: "Guaraná Litro", quantidade: 0, preco: 8.0 },
-        { nome: "Cajuina Litro", quantidade: 0, preco: 8.0 },
-        { nome: "Coca 600ml", quantidade: 0, preco: 7.0 },
-        { nome: "Coca Lata", quantidade: 0, preco: 5.0 },
-        { nome: "Sprite Sem Açúcar Lata", quantidade: 0, preco: 4.5 },
-        { nome: "Fanta Caju Lata", quantidade: 0, preco: 5.0 },
-        { nome: "Coca Zero Lata", quantidade: 0, preco: 5.0 },
-        { nome: "Guaraná Lata", quantidade: 0, preco: 4.5 },
-        { nome: "Laranja Lata", quantidade: 0, preco: 4.5 },
-        { nome: "Uva Lata", quantidade: 0, preco: 4.5 },
-        { nome: "São Geraldo Lata", quantidade: 0, preco: 5.0 },
-        { nome: "Schweppes Cítrus Lata", quantidade: 0, preco: 5.0 },
-        { nome: "Água 500ml", quantidade: 0, preco: 2.0 },
-        { nome: "Água com Gás 500ml", quantidade: 0, preco: 3.0 },
-        { nome: "Água Sprite 500ml", quantidade: 0, preco: 4.5 },
-        { nome: "Suco Goiaba", quantidade: 0, preco: 4.0 },
-        { nome: "Suco Cajá", quantidade: 0, preco: 4.0 },
-        { nome: "Suco Acerola", quantidade: 0, preco: 4.0 },
-        { nome: "Suco Maracujá", quantidade: 0, preco: 5.0 },
-        { nome: "Cerveja Heineken", quantidade: 0, preco: 9.0 },
-        { nome: "Cerveja Budweiser", quantidade: 0, preco: 8.0 },
+        {
+          "nome": "Água sem Gás 500ml",
+          "quantidade": 0,
+          "preco": 3.0
+        },
+        {
+          "nome": "Coca Lata",
+          "quantidade": 0,
+          "preco": 5.0
+        },
+        {
+          "nome": "Coca Zero Lata",
+          "quantidade": 0,
+          "preco": 5.0
+        },
+        {
+          "nome": "Fanta Laranja Lata",
+          "quantidade": 0,
+          "preco": 5.0
+        },
+        {
+          "nome": "Guaraná Lata",
+          "quantidade": 0,
+          "preco": 5.0
+        },
+        {
+          "nome": "Coca Cola 600ml",
+          "quantidade": 0,
+          "preco": 7.0
+        },
+        {
+          "nome": "Suco Acerola 300ml",
+          "quantidade": 0,
+          "preco": 4.0
+        },
+        {
+          "nome": "Suco Goiaba 300ml",
+          "quantidade": 0,
+          "preco": 4.0
+        },
+        {
+          "nome": "Suco Maracujá 300ml",
+          "quantidade": 0,
+          "preco": 5.0
+        },
+        {
+          "nome": "Coca Cola 1L",
+          "quantidade": 0,
+          "preco": 9.0
+        },
       ],
     })
 
@@ -74,18 +102,13 @@ export default {
       <div v-for="(item, index) in Bebidas.tipos" :key="item">
         <button class="botao1" @click="item.quantidade++">+</button>
 
-        <button
-          v-if="item.quantidade > 0"
-          class="botao2"
-          @click="item.quantidade--"
-        >
+        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"
-          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-          {{ item.nome }}</label
-        >
+        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
+            }}x</span>
+          {{ item.nome }}</label>
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
@@ -108,18 +131,21 @@ export default {
   margin-bottom: 20px;
   height: 60px;
 }
+
 #quantidadeDiv {
   font-weight: bold;
-  color: #fdd426;
+  color: #F25430;
   font-size: 20px;
 }
 
 #textDividers {
-  color: #fdd426;
-  font-family: "Great Vibes";
+  color: #F25430;
+  font-family: "Harrison-Rough";
+  text-transform: uppercase;
   font-size: 40px;
   font-weight: lighter;
 }
+
 .dotted-line {
   display: flex;
   align-items: center;
@@ -141,7 +167,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -156,7 +182,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #f2cb05;
+  background-color: #F25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -174,6 +200,7 @@ export default {
   font-size: 16px;
   margin-left: 7px;
 }
+
 #tituloRadio {
   display: flex;
   align-items: center;
