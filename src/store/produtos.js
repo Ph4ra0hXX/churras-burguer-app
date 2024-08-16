@@ -67,7 +67,7 @@ export const produtosStore = defineStore("produto", {
       cardDataStore: [
         {
           id: 1,
-          nome: "BURGER",
+          nome: "BURGUER",
           img: "food1.webp",
           descricao: "Monte do seu jeito",
           url: "/burger",
@@ -95,7 +95,7 @@ export const produtosStore = defineStore("produto", {
         },
         {
           id: 7,
-          nome: "BURGERS MONTADOS",
+          nome: "BURGUERS MONTADOS",
           img: "food11.webp",
           descricao: "Escolha seu favorito",
           url: "/sobremesas",
@@ -125,7 +125,7 @@ export const produtosStore2 = defineStore("produto2", {
       cardDataStore: [
         {
           id: 1,
-          nome: "BURGER",
+          nome: "BURGUER",
           img: "food1.webp",
           descricao: "Monte do seu jeito",
           url: "/burger",
@@ -153,7 +153,7 @@ export const produtosStore2 = defineStore("produto2", {
         },
         {
           id: 7,
-          nome: "BURGERS MONTADOS",
+          nome: "BURGUERS MONTADOS",
           img: "food11.webp",
           descricao: "Escolha seu favorito",
           url: "/sobremesas",
