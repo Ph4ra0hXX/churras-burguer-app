@@ -13,7 +13,7 @@ export default {
     const Burger = ref({
       "Pao": [
         {
-          "nome": "Misturadão", "preco": 13.00, "quantidade": 0, "descricao": "CARNE DE SOL DESFIADA, BACON, CALABRESA, TOMATE, CEBOLA E CHEIRO VERDE.",
+          "nome": "Misturadão", "preco": 10.00, "quantidade": 0, "descricao": "CARNE DE SOL DESFIADA, BACON, CALABRESA, TOMATE, CEBOLA E CHEIRO VERDE.",
         },
       ],
       "Adicionais": [
