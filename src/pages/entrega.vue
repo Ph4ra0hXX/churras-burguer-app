@@ -16,9 +16,31 @@ export default {
 
     const apesoEscolhido = ref(0);
 
+    const taxaLocalidade = ref([{ "nome": "Boa Fé", "preco": "3.00" },
+      { "nome": "Bom Nome", "preco": "3.00" },
+      { "nome": "Pitombeira", "preco": "3.00" },
+      { "nome": "Luiz Alves", "preco": "4.00" },
+      { "nome": "Brotolândia", "preco": "4.00" },
+      { "nome": "São Raimundo", "preco": "4.00" },
+      { "nome": "Estrada das Flores", "preco": "5.00" },
+      { "nome": "Centro", "preco": "5.00" },
+      { "nome": "Sítio Ilha", "preco": "5.00" },
+      { "nome": "João 23", "preco": "6.00" },
+      { "nome": "Limoeirinho", "preco": "6.00" },
+      { "nome": "Populares", "preco": "6.00" },
+      { "nome": "Santa Luzia", "preco": "7.00" },
+      { "nome": "Sítio Socorro", "preco": "7.00" },
+      { "nome": "Sítio Milagres", "preco": "8.00" },
+      { "nome": "Conviver", "preco": "8.00" },
+      { "nome": "Cidade Alta", "preco": "20.00" },
+      { "nome": "Bom Fim", "preco": "20.00" },
+      { "nome": "Arraial", "preco": "20.00" },
+      { "nome": "Várzea do Cobra", "preco": "20.00" },
+      { "nome": "Hospital Regional", "preco": "20.00" }]);
+
     function copyToClipboard() {
       navigator.clipboard
-        .writeText("88994634270")
+        .writeText("00495355364")
         .then(() => {
           toast.success("Pix copiado!", {
             timeout: 2000,
@@ -265,13 +287,13 @@ export default {
         if (
           this.carrinho.dadosPessoais.nome != "" &&
           this.carrinho.dadosPessoais.rua != "" &&
-          this.carrinho.dadosPessoais.bairro != "" &&
+          this.carrinho.dadosPessoais.bairro.nome != "" &&
           this.carrinho.dadosPessoais.numero != "" &&
           this.carrinho.dadosPessoais.formaDePagamento != ""
         ) {
           this.pedidoMontado += `\n*Nome:*\n - ${this.carrinho.dadosPessoais.nome}\n`;
           this.pedidoMontado += `\n*Rua:*\n - ${this.carrinho.dadosPessoais.rua}\n`;
-          this.pedidoMontado += `\n*Bairro:*\n - ${this.carrinho.dadosPessoais.bairro}\n`;
+          this.pedidoMontado += `\n*Bairro:*\n - ${this.carrinho.dadosPessoais.bairro.nome}\n`;
           this.pedidoMontado += `\n*Número:*\n - ${this.carrinho.dadosPessoais.numero}\n`;
           this.pedidoMontado += `\n*Ponto de referência:*\n - ${this.carrinho.dadosPessoais.referencia}\n`;
           this.pedidoMontado += `\n*Forma de entrega:*\n - ${this.carrinho.dadosPessoais.formaDeEntrega}\n`;
@@ -281,7 +303,7 @@ export default {
           }
           this.pedidoMontado += `\n${"-".repeat(30)}\n`;
           this.pedidoMontado += `\n*Total:* _${(
-            Number(this.carrinho.getValorTotal) + 3
+            Number(this.carrinho.getValorTotal) + Number(this.carrinho.dadosPessoais.bairro.preco)
           ).toFixed(2)}_\n`;
 
           this.pedidoMontado = encodeURIComponent(this.pedidoMontado);
@@ -305,6 +327,7 @@ export default {
       finalizarPedido,
       apesoEscolhido,
       copyToClipboard,
+      taxaLocalidade,
     };
   },
 };
@@ -371,7 +394,11 @@ export default {
           </div>
 
           <div class="input-field">
-            <input v-model="carrinho.dadosPessoais.bairro" type="text" id="card_number" placeholder="" />
+            <select id="card_bairro" v-model="carrinho.dadosPessoais.bairro" name="select">
+              <option v-for="(local, index) in taxaLocalidade" :key="index" :value="local">
+                {{ local.nome }} - {{ local.preco }}
+              </option>
+            </select>
           </div>
 
           <br />
@@ -415,6 +442,7 @@ export default {
         <br />
         <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Pix'" class="input-field">
           <button id="butCopiarPix" @click="copyToClipboard">Copiar PIX</button>
+          <p id="beneficiario">Beneficiário: José Rudney</p>
         </div>
         <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'" class="info">
           <h3>Troco?</h3>
@@ -423,10 +451,7 @@ export default {
           <input v-model="carrinho.dadosPessoais.troco" type="number" id="card_number"
             placeholder="troco para 50 reais" />
         </div>
-        <p id="textDescritivo">
-          Caso tenha escolhido entrega, o valor<br />
-          de 3 reais será somada ao total.<br />
-        </p>
+
 
         <button @click="finalizarPedido()" class="btn">finalizar</button>
       </div>
@@ -435,6 +460,19 @@ export default {
 </template>
 
 <style scoped>
+
+
+#card_bairro{
+  height: 45px;
+}
+
+#beneficiario{
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #9ea0a9;
+  font-size: 15px;
+}
 #textDescritivo {
   margin-top: 10px;
 }

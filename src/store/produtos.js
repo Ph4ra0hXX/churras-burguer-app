@@ -95,7 +95,7 @@ export const produtosStore = defineStore("produto", {
         },
         {
           id: 7,
-          nome: "BURGERS JÁ MONTADOS",
+          nome: "BURGERS MONTADOS",
           img: "food5.webp",
           descricao: "Para adoçar",
           url: "/sobremesas",
@@ -153,7 +153,7 @@ export const produtosStore2 = defineStore("produto2", {
         },
         {
           id: 7,
-          nome: "BURGERS JÁ MONTADOS",
+          nome: "BURGERS MONTADOS",
           img: "food5.webp",
           descricao: "Para adoçar",
           url: "/sobremesas",
