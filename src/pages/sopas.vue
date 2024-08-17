@@ -11,18 +11,35 @@ export default {
     const carrinho = carrinhoStore();
 
     const Burger = ref({
-      "Pao": [
+      Pao: [
         {
-          "nome": "Sopa de Feijão", "preco": 7.99, "quantidade": 0,
+          nome: "Sopa de Feijão",
+          preco: 7.99,
+          quantidade: 0,
+          diasSemana: ["segunda"],
         },
         {
-          "nome": "Sopa de Costela", "preco": 7.99, "quantidade": 0,
-        }, {
-          "nome": "Canja", "preco": 7.99, "quantidade": 0,
+          nome: "Sopa de Costela",
+          preco: 7.99,
+          quantidade: 0,
+          diasSemana: ["quarta"],
         },
-
+        {
+          nome: "Canja",
+          preco: 7.99,
+          quantidade: 0,
+          diasSemana: ["sexta"],
+        },
       ],
     });
+
+    function deveExibir(item) {
+      const hoje = new Date().toLocaleDateString("pt-BR", {
+        weekday: "long",
+      });
+
+      return item.diasSemana.includes(hoje);
+    }
 
     function salvarPedido() {
       console.log(Burger.value);
@@ -43,15 +60,14 @@ export default {
       router.push("/");
     }
 
-    function updateQuantities(selectedItem) {
-
-    }
+    function updateQuantities(selectedItem) {}
 
     return {
       Burger,
       salvarPedido,
       updateQuantities,
       voltar,
+      deveExibir,
     };
   },
 };
@@ -66,24 +82,33 @@ export default {
         <hr />
       </div>
       <div v-for="(item, index) in Burger.Pao" :key="item">
-        <button class="botao1" @click="item.quantidade++, updateQuantities(item)">
-          +
-        </button>
+        <div v-if="deveExibir(item)">
+          <button
+            class="botao1"
+            @click="item.quantidade++, updateQuantities(item)"
+          >
+            +
+          </button>
 
-        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
-          -
-        </button>
+          <button
+            v-if="item.quantidade > 0"
+            class="botao2"
+            @click="item.quantidade--"
+          >
+            -
+          </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
-            }}x</span>
-          {{ item.nome }}</label>
-        <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
-        <p id="itens"></p>
-        <br />
+          <label style="pointer-events: none" id="nomeItem" for="adicional"
+            ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+            {{ item.nome }}</label
+          >
+          <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
+          <p id="itens"></p>
+          <br />
+        </div>
       </div>
 
       <!---------------------------->
-
 
       <button @click="salvarPedido" id="butOpcoes" type="submit" value="Submit">
         adicionar
@@ -105,12 +130,12 @@ export default {
 
 #quantidadeDiv {
   font-weight: bold;
-  color: #F25430;
+  color: #f25430;
   font-size: 20px;
 }
 
 #textDividers {
-  color: #F25430;
+  color: #f25430;
   font-family: "Harrison-Rough";
   font-size: 40px;
   font-weight: lighter;
@@ -138,7 +163,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #F25430;
+  background-color: #f25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -153,7 +178,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #F25430;
+  background-color: #f25430;
   color: #000000;
   border: none;
   padding: 5px 10px;

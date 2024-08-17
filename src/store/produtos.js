@@ -71,6 +71,15 @@ export const produtosStore = defineStore("produto", {
           img: "food1.webp",
           descricao: "Monte do seu jeito",
           url: "/burger",
+          diasSemana: [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado",
+            "domingo",
+          ],
         },
         {
           id: 8,
@@ -78,6 +87,7 @@ export const produtosStore = defineStore("produto", {
           img: "food14.webp",
           descricao: "No ponto certo",
           url: "/combo",
+          diasSemana: ["terça"],
         },
         {
           id: 2,
@@ -85,6 +95,7 @@ export const produtosStore = defineStore("produto", {
           img: "food15.webp",
           descricao: "Recheado de verdade",
           url: "/macarronada",
+          diasSemana: ["quinta"],
         },
         {
           id: 6,
@@ -92,6 +103,7 @@ export const produtosStore = defineStore("produto", {
           img: "food12.webp",
           descricao: "Bem cremoso",
           url: "/batata",
+          diasSemana: ["sábado"],
         },
         {
           id: 7,
@@ -99,6 +111,15 @@ export const produtosStore = defineStore("produto", {
           img: "food11.webp",
           descricao: "Escolha seu favorito",
           url: "/sobremesas",
+          diasSemana: [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado",
+            "domingo",
+          ],
         },
         {
           id: 9,
@@ -106,6 +127,7 @@ export const produtosStore = defineStore("produto", {
           img: "food9.webp",
           descricao: "Quentinhas",
           url: "/sopas",
+          diasSemana: ["segunda", "quarta", "sexta"],
         },
         {
           id: 4,
@@ -113,6 +135,15 @@ export const produtosStore = defineStore("produto", {
           img: "food4.webp",
           descricao: "Refrescantes",
           url: "/bebidas",
+          diasSemana: [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado",
+            "domingo",
+          ],
         },
       ],
     };
@@ -129,6 +160,15 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food1.webp",
           descricao: "Monte do seu jeito",
           url: "/burger",
+          diasSemana: [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado",
+            "domingo",
+          ],
         },
         {
           id: 8,
@@ -136,6 +176,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food14.webp",
           descricao: "No ponto certo",
           url: "/combo",
+          diasSemana: ["terça"],
         },
         {
           id: 2,
@@ -143,6 +184,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food15.webp",
           descricao: "Recheado de verdade",
           url: "/macarronada",
+          diasSemana: ["quinta"],
         },
         {
           id: 6,
@@ -150,6 +192,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food12.webp",
           descricao: "Bem cremoso",
           url: "/batata",
+          diasSemana: ["sábado"],
         },
         {
           id: 7,
@@ -157,6 +200,15 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food11.webp",
           descricao: "Escolha seu favorito",
           url: "/sobremesas",
+          diasSemana: [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado",
+            "domingo",
+          ],
         },
         {
           id: 9,
@@ -164,6 +216,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food9.webp",
           descricao: "Quentinhas",
           url: "/sopas",
+          diasSemana: ["segunda", "quarta", "sexta"],
         },
         {
           id: 4,
@@ -171,6 +224,15 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food4.webp",
           descricao: "Refrescantes",
           url: "/bebidas",
+          diasSemana: [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado",
+            "domingo",
+          ],
         },
       ],
     };

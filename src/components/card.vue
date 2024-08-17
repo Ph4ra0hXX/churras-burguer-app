@@ -1,9 +1,16 @@
 <script setup>
 const props = defineProps(["data"]);
+
+function deveExibir(item) {
+  const hoje = new Date().toLocaleDateString('pt-BR', { weekday: 'long' });
+  
+  console.log(hoje)
+  return item.diasSemana.includes(hoje);
+}
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" v-if="deveExibir(data)">
     <router-link :to="data.url">
       <div class="grid">
         <article class="card">
