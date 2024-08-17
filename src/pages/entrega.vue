@@ -19,10 +19,10 @@ export default {
     const taxaLocalidade = ref([{ "nome": "Boa Fé", "preco": "3.00" },
                                       { "nome": "Luiz Alves", "preco": "3.00" },
       { "nome": "Bom Nome", "preco": "4.00" },
-      { "nome": "Pitombeira", "preco": "3.00" },
+      { "nome": "Pitombeira", "preco": "5.00" },
 
       { "nome": "Brotolândia", "preco": "4.00" },
-      { "nome": "São Raimundo", "preco": "4.00" },
+      { "nome": "São Raimundo", "preco": "5.00" },
       { "nome": "Estrada das Flores", "preco": "4.00" },
       { "nome": "Centro", "preco": "4.00" },
       { "nome": "Sítio Ilha", "preco": "4.00" },
