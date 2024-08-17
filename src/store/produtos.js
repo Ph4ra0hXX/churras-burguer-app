@@ -83,7 +83,7 @@ export const produtosStore = defineStore("produto", {
           id: 2,
           nome: "CUSCUZ RECHEADO",
           img: "food15.webp",
-          descricao: "Monte do seu jeito",
+          descricao: "Recheado de verdade",
           url: "/macarronada",
         },
         {
@@ -95,7 +95,7 @@ export const produtosStore = defineStore("produto", {
         },
         {
           id: 7,
-          nome: "BURGUERS MONTADOS",
+          nome: "BURGUERES MONTADOS",
           img: "food11.webp",
           descricao: "Escolha seu favorito",
           url: "/sobremesas",
@@ -141,7 +141,7 @@ export const produtosStore2 = defineStore("produto2", {
           id: 2,
           nome: "CUSCUZ RECHEADO",
           img: "food15.webp",
-          descricao: "Monte do seu jeito",
+          descricao: "Recheado de verdade",
           url: "/macarronada",
         },
         {
@@ -153,7 +153,7 @@ export const produtosStore2 = defineStore("produto2", {
         },
         {
           id: 7,
-          nome: "BURGUERS MONTADOS",
+          nome: "BURGUERES MONTADOS",
           img: "food11.webp",
           descricao: "Escolha seu favorito",
           url: "/sobremesas",
