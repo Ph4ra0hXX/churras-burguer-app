@@ -16,19 +16,19 @@ export default {
           nome: "Sopa de Feijão",
           preco: 7.99,
           quantidade: 0,
-          diasSemana: ["segunda"],
+          diasSemana: ["segunda-feira"],
         },
         {
           nome: "Sopa de Costela",
           preco: 7.99,
           quantidade: 0,
-          diasSemana: ["quarta"],
+          diasSemana: ["quarta-feira"],
         },
         {
           nome: "Canja",
           preco: 7.99,
           quantidade: 0,
-          diasSemana: ["sexta"],
+          diasSemana: ["sexta-feira"],
         },
       ],
     });
@@ -60,7 +60,7 @@ export default {
       router.push("/");
     }
 
-    function updateQuantities(selectedItem) {}
+    function updateQuantities(selectedItem) { }
 
     return {
       Burger,
@@ -83,25 +83,17 @@ export default {
       </div>
       <div v-for="(item, index) in Burger.Pao" :key="item">
         <div v-if="deveExibir(item)">
-          <button
-            class="botao1"
-            @click="item.quantidade++, updateQuantities(item)"
-          >
+          <button class="botao1" @click="item.quantidade++, updateQuantities(item)">
             +
           </button>
 
-          <button
-            v-if="item.quantidade > 0"
-            class="botao2"
-            @click="item.quantidade--"
-          >
+          <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
             -
           </button>
 
-          <label style="pointer-events: none" id="nomeItem" for="adicional"
-            ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-            {{ item.nome }}</label
-          >
+          <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
+              }}x</span>
+            {{ item.nome }}</label>
           <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
           <p id="itens"></p>
           <br />
