@@ -216,7 +216,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food9.webp",
           descricao: "Quentinhas",
           url: "/sopas",
-          diasSemana: ["segunda-feira", "quarta-feira", "sexta-feira"],
+          diasSemana: ["segunda-feira", "sexta-feira"],
         },
         {
           id: 4,
