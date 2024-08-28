@@ -1,7 +1,7 @@
 <template>
   <div class="rodape">
     <br />
-    Domingo a Domingo, das 18:30h as 23:00h<br />
+    Quarta a segunda, das 18:30h as 23:00h<br />
     <br />
     José Ferreira Sombra, 1935, apto 101, Luís Alves de Freitas <br />
     Em cima da Loja LugaSom<br />
