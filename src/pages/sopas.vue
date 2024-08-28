@@ -14,19 +14,13 @@ export default {
       Pao: [
         {
           nome: "Sopa de Feijão",
-          preco: 7.99,
+          preco: 8.00,
           quantidade: 0,
           diasSemana: ["segunda-feira"],
         },
         {
           nome: "Sopa de Costela",
-          preco: 7.99,
-          quantidade: 0,
-          diasSemana: ["quarta-feira"],
-        },
-        {
-          nome: "Canja",
-          preco: 7.99,
+          preco: 8.00,
           quantidade: 0,
           diasSemana: ["sexta-feira"],
         },
