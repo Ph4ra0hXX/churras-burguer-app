@@ -11,35 +11,34 @@ export default {
     const carrinho = carrinhoStore();
 
     const Burger = ref({
-      "Pao": [
-        { "nome": "Pão Árabe", "preco": 3.00, "quantidade": 0 },
-        { "nome": "Pão Bola", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Pão Brioche", "preco": 2.50, "quantidade": 0 },
-        { "nome": "Pão Integral", "preco": 5.00, "quantidade": 0 }
+      Pao: [
+        { nome: "Pão Árabe", preco: 3.0, quantidade: 0 },
+        { nome: "Pão Bola", preco: 2.5, quantidade: 0 },
+        { nome: "Pão Brioche", preco: 3.5, quantidade: 0 },
+        { nome: "Pão Integral", preco: 5.0, quantidade: 0 },
       ],
-      "Adicionais": [
-        { "nome": "Hambúrguer Tradicional", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Hambúrguer Caseiro", "preco": 6.00, "quantidade": 0 },
-        { "nome": "Filé de Frango Trinchado", "preco": 4.00, "quantidade": 0 },
-        { "nome": "Boi Trinchado", "preco": 8.00, "quantidade": 0 },
-        { "nome": "Carne de Sol Desfiada", "preco": 5.00, "quantidade": 0 },
-        { "nome": "Queijo Mussarela", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Queijo Cheddar", "preco": 2.50, "quantidade": 0 },
-        { "nome": "Queijo Coalho", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Bacon", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Calabresa", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Presunto Peru", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Batata Palha", "preco": 1.50, "quantidade": 0 },
-        { "nome": "Milho Verde", "preco": 1.00, "quantidade": 0 },
-        { "nome": "Ovo", "preco": 2.00, "quantidade": 0 },
-        { "nome": "Molho Especial", "preco": 0.00, "quantidade": 0 }
-
+      Adicionais: [
+        { nome: "Hambúrguer Tradicional", preco: 2.5, quantidade: 0 },
+        { nome: "Hambúrguer Caseiro", preco: 7.0, quantidade: 0 },
+        { nome: "Filé de Frango Trinchado", preco: 5.0, quantidade: 0 },
+        { nome: "Boi Trinchado", preco: 8.0, quantidade: 0 },
+        { nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
+        { nome: "Queijo Mussarela", preco: 2.5, quantidade: 0 },
+        { nome: "Queijo Cheddar", preco: 3.0, quantidade: 0 },
+        { nome: "Queijo Coalho", preco: 2.0, quantidade: 0 },
+        { nome: "Bacon", preco: 3.0, quantidade: 0 },
+        { nome: "Calabresa", preco: 3.0, quantidade: 0 },
+        { nome: "Presunto Peru", preco: 2.5, quantidade: 0 },
+        { nome: "Batata Palha", preco: 1.5, quantidade: 0 },
+        { nome: "Milho Verde", preco: 1.0, quantidade: 0 },
+        { nome: "Ovo", preco: 2.0, quantidade: 0 },
+        { nome: "Molho Especial", preco: 0.0, quantidade: 0 },
       ],
-      "Saladas": [
-        { "nome": "Alface", "preco": 0.00, "quantidade": 0 },
-        { "nome": "Tomate", "preco": 0.00, "quantidade": 0 },
-        { "nome": "Cebola", "preco": 0.00, "quantidade": 0 }
-      ]
+      Saladas: [
+        { nome: "Alface", preco: 0.0, quantidade: 0 },
+        { nome: "Tomate", preco: 0.0, quantidade: 0 },
+        { nome: "Cebola", preco: 0.0, quantidade: 0 },
+      ],
     });
 
     function salvarPedido() {
@@ -90,17 +89,25 @@ export default {
         <hr />
       </div>
       <div v-for="(item, index) in Burger.Pao" :key="item">
-        <button class="botao1" @click="item.quantidade++, updateQuantities(item)">
+        <button
+          class="botao1"
+          @click="item.quantidade++, updateQuantities(item)"
+        >
           +
         </button>
 
-        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
-            }}x</span>
-          {{ item.nome }}</label>
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
@@ -113,13 +120,18 @@ export default {
       <div v-for="(item, index) in Burger.Adicionais" :key="item">
         <button class="botao1" @click="item.quantidade++">+</button>
 
-        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
-            }}x</span>
-          {{ item.nome }}</label>
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
@@ -136,34 +148,42 @@ export default {
       <div v-for="(item, index) in Burger.Saladas" :key="item">
         <button class="botao1" @click="item.quantidade++">+</button>
 
-        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
-            }}x</span>
-          {{ item.nome }}</label>
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
       </div>
-
 
       <div v-for="(item, index) in Burger.Complemento" :key="item">
         <button class="botao1" @click="item.quantidade++">+</button>
 
-        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
-            }}x</span>
-          {{ item.nome }}</label>
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
       </div>
-
 
       <button @click="salvarPedido" id="butOpcoes" type="submit" value="Submit">
         adicionar
@@ -185,12 +205,12 @@ export default {
 
 #quantidadeDiv {
   font-weight: bold;
-  color: #F25430;
+  color: #f25430;
   font-size: 20px;
 }
 
 #textDividers {
-  color: #F25430;
+  color: #f25430;
   font-family: "Harrison-Rough";
   font-size: 40px;
   font-weight: lighter;
@@ -218,7 +238,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #F25430;
+  background-color: #f25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -233,7 +253,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #F25430;
+  background-color: #f25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
