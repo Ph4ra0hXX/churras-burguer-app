@@ -81,14 +81,14 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        {
+        /* {
           id: 8,
           nome: "BATATA RECHEADA",
           img: "food14.webp",
           descricao: "No ponto certo",
           url: "/combo",
           diasSemana: ["quarta-feira"],
-        },
+        },*/
         {
           id: 2,
           nome: "CUSCUZ RECHEADO",
@@ -170,14 +170,14 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        {
+        /* {
           id: 8,
           nome: "BATATA RECHEADA",
           img: "food14.webp",
           descricao: "No ponto certo",
           url: "/combo",
           diasSemana: ["quarta-feira"],
-        },
+        },*/
         {
           id: 2,
           nome: "CUSCUZ RECHEADO",
