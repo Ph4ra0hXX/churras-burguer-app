@@ -16,33 +16,35 @@ export default {
 
     const apesoEscolhido = ref(0);
 
-    const taxaLocalidade = ref([{ "nome": "Boa Fé", "preco": "3.00" },
-    { "nome": "Luiz Alves", "preco": "3.00" },
-    { "nome": "Bom Nome", "preco": "4.00" },
-    { "nome": "Pitombeira", "preco": "5.00" },
+    const taxaLocalidade = ref([
+      { nome: "Boa Fé", preco: "3.00" },
+      { nome: "Luiz Alves", preco: "3.00" },
+      { nome: "Bom Nome", preco: "4.00" },
+      { nome: "Pitombeira", preco: "5.00" },
 
-    { "nome": "Brotolândia", "preco": "4.00" },
-    { "nome": "São Raimundo", "preco": "5.00" },
-    { "nome": "Estrada das Flores", "preco": "4.00" },
-    { "nome": "Centro", "preco": "4.00" },
-    { "nome": "Sítio Ilha", "preco": "4.00" },
-    { "nome": "João 23", "preco": "4.00" },
-    { "nome": "Limoeirinho", "preco": "4.00" },
-    { "nome": "Populares", "preco": "4.00" },
-    { "nome": "Eucaliptos", "preco": "4.00" },
-    { "nome": "Santa Luzia", "preco": "4.00" },
-    { "nome": "Sítio Socorro", "preco": "5.00" },
-    { "nome": "Sítio Milagres", "preco": "8.00" },
-    { "nome": "Conviver", "preco": "8.00" },
-    { "nome": "Cidade Alta", "preco": "7.00" },
-    { "nome": "Bom Fim", "preco": "8.00" },
-    { "nome": "Arraial", "preco": "7.00" },
-    { "nome": "Várzea do Cobra", "preco": "8.00" },
-    { "nome": "Hospital Regional", "preco": "20.00" }]);
+      { nome: "Brotolândia", preco: "4.00" },
+      { nome: "São Raimundo", preco: "5.00" },
+      { nome: "Estrada das Flores", preco: "4.00" },
+      { nome: "Centro", preco: "4.00" },
+      { nome: "Sítio Ilha", preco: "4.00" },
+      { nome: "João 23", preco: "4.00" },
+      { nome: "Limoeirinho", preco: "4.00" },
+      { nome: "Populares", preco: "4.00" },
+      { nome: "Eucaliptos", preco: "4.00" },
+      { nome: "Santa Luzia", preco: "4.00" },
+      { nome: "Sítio Socorro", preco: "5.00" },
+      { nome: "Sítio Milagres", preco: "8.00" },
+      { nome: "Conviver", preco: "8.00" },
+      { nome: "Cidade Alta", preco: "7.00" },
+      { nome: "Bom Fim", preco: "8.00" },
+      { nome: "Arraial", preco: "7.00" },
+      { nome: "Várzea do Cobra", preco: "8.00" },
+      { nome: "Hospital Regional", preco: "20.00" },
+    ]);
 
     function copyToClipboard() {
       navigator.clipboard
-        .writeText("00495355364")
+        .writeText("57246184000191")
         .then(() => {
           toast.success("Pix copiado!", {
             timeout: 2000,
@@ -305,7 +307,8 @@ export default {
           }
           this.pedidoMontado += `\n${"-".repeat(30)}\n`;
           this.pedidoMontado += `\n*Total:* _${(
-            Number(this.carrinho.getValorTotal) + Number(this.carrinho.dadosPessoais.bairro.preco)
+            Number(this.carrinho.getValorTotal) +
+            Number(this.carrinho.dadosPessoais.bairro.preco)
           ).toFixed(2)}_\n`;
 
           this.pedidoMontado = encodeURIComponent(this.pedidoMontado);
@@ -346,8 +349,13 @@ export default {
       </div>
       <div class="payment-container">
         <div class="price-card">
-          <input v-model="carrinho.dadosPessoais.formaDeEntrega" value="Vou buscar" type="radio" name="Vou buscar"
-            id="Vou buscar" />
+          <input
+            v-model="carrinho.dadosPessoais.formaDeEntrega"
+            value="Vou buscar"
+            type="radio"
+            name="Vou buscar"
+            id="Vou buscar"
+          />
           <div class="content">
             Vou buscar
             <span>grátis</span>
@@ -355,8 +363,13 @@ export default {
           <label for="Vou buscar"></label>
         </div>
         <div class="price-card">
-          <input v-model="carrinho.dadosPessoais.formaDeEntrega" value="Quero entrega" name="Quero entrega" type="radio"
-            id="Quero entrega" />
+          <input
+            v-model="carrinho.dadosPessoais.formaDeEntrega"
+            value="Quero entrega"
+            name="Quero entrega"
+            type="radio"
+            id="Quero entrega"
+          />
           <div class="content">
             Quero entega
             <span>taxa de entrega</span>
@@ -371,7 +384,12 @@ export default {
             <h3>Seu Nome:</h3>
           </div>
           <div class="input-field">
-            <input v-model="carrinho.dadosPessoais.nome" type="text" id="card_number" placeholder="" />
+            <input
+              v-model="carrinho.dadosPessoais.nome"
+              type="text"
+              id="card_number"
+              placeholder=""
+            />
           </div>
           <br />
         </div>
@@ -381,14 +399,24 @@ export default {
             <h3>Seu Nome:</h3>
           </div>
           <div class="input-field">
-            <input v-model="carrinho.dadosPessoais.nome" type="text" id="card_number" placeholder="" />
+            <input
+              v-model="carrinho.dadosPessoais.nome"
+              type="text"
+              id="card_number"
+              placeholder=""
+            />
           </div>
           <br />
           <div class="info">
             <h3>Rua:</h3>
           </div>
           <div class="input-field">
-            <input v-model="carrinho.dadosPessoais.rua" type="text" id="card_number" placeholder="" />
+            <input
+              v-model="carrinho.dadosPessoais.rua"
+              type="text"
+              id="card_number"
+              placeholder=""
+            />
           </div>
           <br />
           <div class="info">
@@ -396,8 +424,16 @@ export default {
           </div>
 
           <div class="input-field">
-            <select id="card_bairro" v-model="carrinho.dadosPessoais.bairro" name="select">
-              <option v-for="(local, index) in taxaLocalidade" :key="index" :value="local">
+            <select
+              id="card_bairro"
+              v-model="carrinho.dadosPessoais.bairro"
+              name="select"
+            >
+              <option
+                v-for="(local, index) in taxaLocalidade"
+                :key="index"
+                :value="local"
+              >
                 {{ local.nome }} - {{ local.preco }}
               </option>
             </select>
@@ -408,14 +444,24 @@ export default {
             <h3>Número da Casa:</h3>
           </div>
           <div class="input-field">
-            <input v-model="carrinho.dadosPessoais.numero" type="number" id="card_number" placeholder="" />
+            <input
+              v-model="carrinho.dadosPessoais.numero"
+              type="number"
+              id="card_number"
+              placeholder=""
+            />
           </div>
           <br />
           <div class="info">
             <h3>Ponto de Referência:</h3>
           </div>
           <div class="input-field">
-            <input v-model="carrinho.dadosPessoais.referencia" type="text" id="card_number" placeholder="" />
+            <input
+              v-model="carrinho.dadosPessoais.referencia"
+              type="text"
+              id="card_number"
+              placeholder=""
+            />
           </div>
           <br />
         </div>
@@ -424,36 +470,64 @@ export default {
         </div>
         <div class="payment-container">
           <div class="price-card">
-            <input v-model="carrinho.dadosPessoais.formaDePagamento" value="Pix" name="price" type="radio" id="pix" />
+            <input
+              v-model="carrinho.dadosPessoais.formaDePagamento"
+              value="Pix"
+              name="price"
+              type="radio"
+              id="pix"
+            />
             <div class="content">PIX</div>
             <label for="pix"></label>
           </div>
           <div class="price-card">
-            <input v-model="carrinho.dadosPessoais.formaDePagamento" value="Cartão" name="price" type="radio"
-              id="cartao" />
+            <input
+              v-model="carrinho.dadosPessoais.formaDePagamento"
+              value="Cartão"
+              name="price"
+              type="radio"
+              id="cartao"
+            />
             <div class="content">Cartão</div>
             <label for="cartao"></label>
           </div>
           <div class="price-card">
-            <input v-model="carrinho.dadosPessoais.formaDePagamento" value="Dinheiro" name="price" type="radio"
-              id="dinheiro" />
+            <input
+              v-model="carrinho.dadosPessoais.formaDePagamento"
+              value="Dinheiro"
+              name="price"
+              type="radio"
+              id="dinheiro"
+            />
             <div class="content">Dinheiro</div>
             <label for="dinheiro"></label>
           </div>
         </div>
         <br />
-        <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Pix'" class="input-field">
+        <div
+          v-if="carrinho.dadosPessoais.formaDePagamento == 'Pix'"
+          class="input-field"
+        >
           <button id="butCopiarPix" @click="copyToClipboard">Copiar PIX</button>
           <p id="beneficiario">Beneficiário: José Rudney</p>
         </div>
-        <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'" class="info">
+        <div
+          v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'"
+          class="info"
+        >
           <h3>Troco?</h3>
         </div>
-        <div v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'" class="input-field">
-          <input v-model="carrinho.dadosPessoais.troco" type="number" id="card_number"
-            placeholder="troco para 50 reais" />
+        <div
+          v-if="carrinho.dadosPessoais.formaDePagamento == 'Dinheiro'"
+          class="input-field"
+        >
+          <input
+            v-model="carrinho.dadosPessoais.troco"
+            type="number"
+            id="card_number"
+            placeholder="troco para 50 reais"
+          />
         </div>
-
 
         <button @click="finalizarPedido()" class="btn">finalizar</button>
       </div>
@@ -517,7 +591,7 @@ export default {
 }
 
 .checkout-card .title span {
-  color: #F25430;
+  color: #f25430;
 }
 
 .checkout-card .title p {
@@ -565,10 +639,10 @@ export default {
   cursor: pointer;
 }
 
-.price-card input[type="radio"]:checked~label {
-  border: 1px solid #F25430;
+.price-card input[type="radio"]:checked ~ label {
+  border: 1px solid #f25430;
   background: #e4ec0d23;
-  color: #F25430;
+  color: #f25430;
   outline: none;
   border-width: 2px;
 }
@@ -578,7 +652,7 @@ export default {
   height: auto;
   border: 0;
 
-  accent-color: #F25430;
+  accent-color: #f25430;
   transform: scale(1.5);
 }
 
@@ -629,7 +703,7 @@ export default {
 }
 
 .input-field input:focus {
-  border: 1px solid #F25430;
+  border: 1px solid #f25430;
   outline: none;
 }
 
@@ -653,7 +727,7 @@ export default {
   width: 100%;
   padding: 1rem;
   letter-spacing: 0.8px;
-  background: #F25430;
+  background: #f25430;
   border: none;
   color: #fff;
   border-radius: 3px;
