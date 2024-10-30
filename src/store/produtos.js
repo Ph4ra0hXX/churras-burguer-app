@@ -208,7 +208,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food12.webp",
           descricao: "Consultar disponibilidade ",
           url: "/batata",
-          diasSemana: ["sábado"],
+          diasSemana: ["sábado", "quinta-feira"],
         },
         {
           id: 7,
