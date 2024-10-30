@@ -97,7 +97,7 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        {
+        /* {
           id: 2,
           nome: "CUSCUZ RECHEADO",
           img: "food15.webp",
@@ -113,7 +113,7 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        /* {
+         {
           id: 6,
           nome: "VATAPÁ/CREME DE GALINHA",
           img: "food12.webp",
@@ -202,7 +202,7 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        {
+        /*{
           id: 2,
           nome: "CUSCUZ RECHEADO",
           img: "food15.webp",
@@ -218,7 +218,7 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        /*{
+        {
           id: 6,
           nome: "VATAPÁ/CREME DE GALINHA",
           img: "food12.webp",
