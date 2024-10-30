@@ -200,7 +200,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food15.webp",
           descricao: "Recheado de verdade",
           url: "/macarronada",
-          diasSemana: ["quinta-feira", "quinta-feira"],
+          diasSemana: ["quarta-feira", "quinta-feira"],
         },
         {
           id: 6,
@@ -208,7 +208,7 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food12.webp",
           descricao: "Consultar disponibilidade ",
           url: "/batata",
-          diasSemana: ["sábado", "quinta-feira"],
+          diasSemana: ["sábado", "quarta-feira"],
         },
         {
           id: 7,
