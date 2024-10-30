@@ -113,14 +113,22 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        /*  {
+        {
           id: 6,
-          nome: "VATAPÁ/CREME DE GALINHA",
-          img: "food12.webp",
-          descricao: "Consultar disponibilidade ",
+          nome: "PORÇÕES",
+          img: "food3.webp",
+          descricao: "Disponível todos os dias",
           url: "/batata",
-          diasSemana: ["sábado"],
-        },*/
+          diasSemana: [
+            "segunda-feira",
+            "terça-feira",
+            "quarta-feira",
+            "quinta-feira",
+            "sexta-feira",
+            "sábado",
+            "domingo",
+          ],
+        },
         {
           id: 7,
           nome: "BURGUERES MONTADOS",
@@ -218,14 +226,22 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        /*{
+        {
           id: 6,
-          nome: "VATAPÁ/CREME DE GALINHA",
-          img: "food12.webp",
-          descricao: "Consultar disponibilidade ",
+          nome: "PORÇÕES",
+          img: "food3.webp",
+          descricao: "Disponível todos os dias",
           url: "/batata",
-          diasSemana: ["sábado", "quarta-feira"],
-        },*/
+          diasSemana: [
+            "segunda-feira",
+            "terça-feira",
+            "quarta-feira",
+            "quinta-feira",
+            "sexta-feira",
+            "sábado",
+            "domingo",
+          ],
+        },
         {
           id: 7,
           nome: "BURGUERES MONTADOS",

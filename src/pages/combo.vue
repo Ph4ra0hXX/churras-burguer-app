@@ -17,21 +17,21 @@ export default {
           preco: 23.0,
           quantidade: 0,
           descricao:
-            "PÃO BOLA SELADO NA MANTEIGA, ALFACE, TOMATE, HAMBÚRGUER TRADICIONAL, PRESUNTO, MUÇARELA.",
+            "Pão bola selado na manteiga, alface, tomate, hambúrguer tradicional, presunto, muçarela.",
         },
         {
           nome: "Burguer Carne Especial + Batata + Refrigerante",
           preco: 29.0,
           quantidade: 0,
           descricao:
-            "PÃO BRIOCHE SELADO NA MANTEIGA, ALFACE, TOMATE, HAMBÚRGUER CASEIRO, MUÇARELA, BACON E OVO.",
+            "Pão brioche selado na manteiga, alface, tomate, hambúrguer caseiro, muçarela, bacon e ovo.",
         },
         {
           nome: "Burguer Frango Especial + Batata + Refrigerante",
           preco: 27.0,
           quantidade: 0,
           descricao:
-            "PÃO ÁRABE SELADO NA MANTEIGA, ALFACE, TOMATE, FILÉ DE FRANGO TRINCHADO, BACON E OVO.",
+            "Pão árabe selado na manteiga, alface, tomate, filé de frango trinchado, bacon e ovo.",
         },
       ],
     });
