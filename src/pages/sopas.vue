@@ -13,21 +13,34 @@ export default {
     const Burger = ref({
       Pao: [
         {
-          nome: "Sopa de Feijão",
-          preco: 8.0,
+          nome: "Burguer Drácula - CARNE",
+          preco: 18.0,
           quantidade: 0,
-          diasSemana: ["segunda-feira", "sexta-feira"],
+          descricao:
+            "Pão brioche black selado na manteiga, hambúrguer caseiro, baba de bruxa, bacon, ovo, tomate, alface e cebola.",
+        },
+        {
+          nome: "Burguer Coringa - FRANGO",
+          preco: 15.0,
+          quantidade: 0,
+          descricao:
+            "Pão brioche red selado na manteiga, filé de frango trinchado, sangue de bruxa, bacon, ovo, tomate, alface e cebola.",
         },
       ],
+      Adicionais: [
+        { nome: "Filé de Frango Trinchado", preco: 5.0, quantidade: 0 },
+        { nome: "Calabresa", preco: 3.0, quantidade: 0 },
+        { nome: "Boi Trinchado", preco: 8.0, quantidade: 0 },
+        { nome: "Presunto Peru", preco: 2.5, quantidade: 0 },
+        { nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
+        { nome: "Batata Palha", preco: 1.5, quantidade: 0 },
+        { nome: "Queijo Mussarela", preco: 2.5, quantidade: 0 },
+        { nome: "Milho Verde", preco: 1.0, quantidade: 0 },
+        { nome: "Queijo Cheddar", preco: 3.0, quantidade: 0 },
+        { nome: "Queijo Coalho", preco: 2.0, quantidade: 0 },
+        { nome: "Bacon", preco: 3.0, quantidade: 0 },
+      ],
     });
-
-    function deveExibir(item) {
-      const hoje = new Date().toLocaleDateString("pt-BR", {
-        weekday: "long",
-      });
-
-      return item.diasSemana.includes(hoje);
-    }
 
     function salvarPedido() {
       console.log(Burger.value);
@@ -48,14 +61,21 @@ export default {
       router.push("/");
     }
 
-    function updateQuantities(selectedItem) {}
+    function updateQuantities(selectedItem) {
+      this.Burger.Pao.forEach((item) => {
+        if (item === selectedItem) {
+          item.quantidade = 1;
+        } else {
+          item.quantidade = 0;
+        }
+      });
+    }
 
     return {
       Burger,
       salvarPedido,
       updateQuantities,
       voltar,
-      deveExibir,
     };
   },
 };
@@ -66,36 +86,58 @@ export default {
     <div id="listar">
       <div class="dotted-line">
         <hr />
-        <span id="textDividers">Sopas</span>
+        <span id="textDividers">especial de halloween</span>
         <hr />
       </div>
       <div v-for="(item, index) in Burger.Pao" :key="item">
-        <div v-if="deveExibir(item)">
-          <button
-            class="botao1"
-            @click="item.quantidade++, updateQuantities(item)"
-          >
-            +
-          </button>
+        <button
+          class="botao1"
+          @click="item.quantidade++, updateQuantities(item)"
+        >
+          +
+        </button>
 
-          <button
-            v-if="item.quantidade > 0"
-            class="botao2"
-            @click="item.quantidade--"
-          >
-            -
-          </button>
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
+          -
+        </button>
 
-          <label style="pointer-events: none" id="nomeItem" for="adicional"
-            ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-            {{ item.nome }}</label
-          >
-          <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
-          <p id="itens"></p>
-          <br />
-        </div>
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
+        <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
+        <p id="itens">{{ item.descricao }}</p>
+        <br />
       </div>
+      <!--     <div class="dotted-line">
+        <hr />
+        <span id="textDividers">Adicionais</span>
+        <hr />
+      </div>
+      <div v-for="(item, index) in Burger.Adicionais" :key="item">
+        <button class="botao1" @click="item.quantidade++">+</button>
 
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
+          -
+        </button>
+
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
+        <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
+        <p id="itens"></p>
+        <br />
+      </div>
+-->
       <!---------------------------->
 
       <button @click="salvarPedido" id="butOpcoes" type="submit" value="Submit">

@@ -66,6 +66,22 @@ export const produtosStore = defineStore("produto", {
     return {
       cardDataStore: [
         {
+          id: 9,
+          nome: "ASSUSTADORAMENTE",
+          img: "food9.webp",
+          descricao: "Delicioso",
+          url: "/sopas",
+          diasSemana: [
+            "segunda-feira",
+            "terça-feira",
+            "quarta-feira",
+            "quinta-feira",
+            "sexta-feira",
+            "sábado",
+            "domingo",
+          ],
+        },
+        {
           id: 1,
           nome: "BURGUER",
           img: "food1.webp",
@@ -145,14 +161,7 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        /* {
-          id: 9,
-          nome: "SOPAS",
-          img: "food9.webp",
-          descricao: "Quentinhas",
-          url: "/sopas",
-          diasSemana: ["segunda-feira", "sexta-feira"],
-        },*/
+
         {
           id: 4,
           nome: "BEBIDAS",
@@ -179,6 +188,22 @@ export const produtosStore2 = defineStore("produto2", {
     return {
       cardDataStore: [
         {
+          id: 9,
+          nome: "ASSUSTADORAMENTE",
+          img: "food9.webp",
+          descricao: "Delicioso",
+          url: "/sopas",
+          diasSemana: [
+            "segunda-feira",
+            "terça-feira",
+            "quarta-feira",
+            "quinta-feira",
+            "sexta-feira",
+            "sábado",
+            "domingo",
+          ],
+        },
+        {
           id: 1,
           nome: "BURGUER",
           img: "food1.webp",
@@ -258,14 +283,7 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        /*  {
-          id: 9,
-          nome: "SOPAS",
-          img: "food9.webp",
-          descricao: "Quentinhas",
-          url: "/sopas",
-          diasSemana: ["segunda-feira", "sexta-feira"],
-        },*/
+
         {
           id: 4,
           nome: "BEBIDAS",
