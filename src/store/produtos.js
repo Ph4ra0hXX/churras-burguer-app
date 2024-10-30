@@ -103,16 +103,24 @@ export const produtosStore = defineStore("produto", {
           img: "food15.webp",
           descricao: "Recheado de verdade",
           url: "/macarronada",
-          diasSemana: ["quinta-feira", "quinta-feira"],
+          diasSemana: [
+            "segunda-feira",
+            "terça-feira",
+            "quarta-feira",
+            "quinta-feira",
+            "sexta-feira",
+            "sábado",
+            "domingo",
+          ],
         },
-        {
+        /* {
           id: 6,
           nome: "VATAPÁ/CREME DE GALINHA",
           img: "food12.webp",
           descricao: "Consultar disponibilidade ",
           url: "/batata",
           diasSemana: ["sábado"],
-        },
+        },*/
         {
           id: 7,
           nome: "BURGUERES MONTADOS",
@@ -129,14 +137,14 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        {
+        /* {
           id: 9,
           nome: "SOPAS",
           img: "food9.webp",
           descricao: "Quentinhas",
           url: "/sopas",
           diasSemana: ["segunda-feira", "sexta-feira"],
-        },
+        },*/
         {
           id: 4,
           nome: "BEBIDAS",
@@ -200,16 +208,24 @@ export const produtosStore2 = defineStore("produto2", {
           img: "food15.webp",
           descricao: "Recheado de verdade",
           url: "/macarronada",
-          diasSemana: ["quarta-feira", "quinta-feira"],
+          diasSemana: [
+            "segunda-feira",
+            "terça-feira",
+            "quarta-feira",
+            "quinta-feira",
+            "sexta-feira",
+            "sábado",
+            "domingo",
+          ],
         },
-        {
+        /*{
           id: 6,
           nome: "VATAPÁ/CREME DE GALINHA",
           img: "food12.webp",
           descricao: "Consultar disponibilidade ",
           url: "/batata",
           diasSemana: ["sábado", "quarta-feira"],
-        },
+        },*/
         {
           id: 7,
           nome: "BURGUERES MONTADOS",
@@ -226,14 +242,14 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        {
+        /*  {
           id: 9,
           nome: "SOPAS",
           img: "food9.webp",
           descricao: "Quentinhas",
           url: "/sopas",
           diasSemana: ["segunda-feira", "sexta-feira"],
-        },
+        },*/
         {
           id: 4,
           nome: "BEBIDAS",

@@ -13,11 +13,60 @@ export default {
     const Burger = ref({
       Pao: [
         {
-          nome: "Misturadão",
+          nome: "Cuscuz Misturadão",
           preco: 10.0,
           quantidade: 0,
           descricao:
-            "CARNE DE SOL DESFIADA, BACON, CALABRESA, TOMATE, CEBOLA E CHEIRO VERDE.",
+            "Acompanha: Carne de sol desfiada, bacon, calabresa, tomate, cebola e cheiro verde.",
+        },
+
+        {
+          nome: "Vatapá",
+          preco: 10.0,
+          quantidade: 0,
+          descricao: "Acompanha: Arroz e paçoca",
+        },
+        {
+          nome: "Creme de Galinha",
+          preco: 10.0,
+          quantidade: 0,
+          descricao: "Acompanha: Arroz",
+        },
+        {
+          nome: "Lasanha de Carne",
+          preco: 15.0,
+          quantidade: 0,
+          descricao: "Acompanha: Arroz e batata palha",
+        },
+        {
+          nome: "Escondidinho de Carne de Sol",
+          preco: 15.0,
+          quantidade: 0,
+          descricao: "Acompanha: Arroz e batata palha",
+        },
+        {
+          nome: "Fricassê de Frango",
+          preco: 15.0,
+          quantidade: 0,
+          descricao: "Acompanha: Arroz e batata palha",
+        },
+        {
+          nome: "Sopa de Feijão 500ml",
+          preco: 8.0,
+          quantidade: 0,
+          descricao: "-",
+        },
+        {
+          nome: "Baião com Trinchado de Boi",
+          preco: 0.0,
+          quantidade: 0,
+          descricao: "-",
+        },
+        {
+          nome: "Baião com Trinchado de Frango",
+          preco: 0.0,
+          quantidade: 0,
+          descricao: "-",
         },
       ],
       Adicionais: [
@@ -106,7 +155,7 @@ export default {
         <p id="itens">{{ item.descricao }}</p>
         <br />
       </div>
-      <div class="dotted-line">
+      <!--     <div class="dotted-line">
         <hr />
         <span id="textDividers">Adicionais</span>
         <hr />
@@ -130,7 +179,7 @@ export default {
         <p id="itens"></p>
         <br />
       </div>
-
+-->
       <!---------------------------->
 
       <button @click="salvarPedido" id="butOpcoes" type="submit" value="Submit">

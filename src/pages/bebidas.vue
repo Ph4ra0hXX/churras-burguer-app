@@ -53,6 +53,11 @@ export default {
           preco: 5.0,
         },
         {
+          nome: "Cajuína Lata",
+          quantidade: 0,
+          preco: 6.0,
+        },
+        {
           nome: "Coca Cola 600ml",
           quantidade: 0,
           preco: 7.0,
