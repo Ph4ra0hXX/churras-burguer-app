@@ -1,94 +1,140 @@
 <script>
-import { ref, watch, onUpdated } from "vue"
-import { carrinhoStore } from "../store/produtos"
-import { useToast } from "vue-toastification"
-import router from "../router/index"
+import { ref, watch, onUpdated } from "vue";
+import { carrinhoStore } from "../store/produtos";
+import { useToast } from "vue-toastification";
+import router from "../router/index";
 
 export default {
   setup() {
-    const toast = useToast()
+    const toast = useToast();
 
-    const carrinho = carrinhoStore()
+    const carrinho = carrinhoStore();
 
     const Bebidas = ref({
       tipos: [
         {
-          "nome": "Água sem Gás 500ml",
-          "quantidade": 0,
-          "preco": 3.0
+          nome: "Água sem Gás 500ml",
+          quantidade: 0,
+          preco: 3.0,
         },
         {
-          "nome": "Coca Lata",
-          "quantidade": 0,
-          "preco": 5.0
+          nome: "Água com Gás 500ml",
+          quantidade: 0,
+          preco: 4.0,
         },
         {
-          "nome": "Coca Zero Lata",
-          "quantidade": 0,
-          "preco": 5.0
+          nome: "Água sem Gás 1,5L",
+          quantidade: 0,
+          preco: 6.0,
         },
         {
-          "nome": "Fanta Laranja Lata",
-          "quantidade": 0,
-          "preco": 5.0
+          nome: "Coca Lata",
+          quantidade: 0,
+          preco: 5.0,
         },
         {
-          "nome": "Guaraná Lata",
-          "quantidade": 0,
-          "preco": 5.0
+          nome: "Coca Zero Lata",
+          quantidade: 0,
+          preco: 5.0,
         },
         {
-          "nome": "Coca Cola 600ml",
-          "quantidade": 0,
-          "preco": 7.0
+          nome: "Fanta Laranja Lata",
+          quantidade: 0,
+          preco: 5.0,
         },
         {
-          "nome": "Suco Acerola 300ml",
-          "quantidade": 0,
-          "preco": 4.0
+          nome: "Uva Lata",
+          quantidade: 0,
+          preco: 5.0,
         },
         {
-          "nome": "Suco Goiaba 300ml",
-          "quantidade": 0,
-          "preco": 4.0
+          nome: "Guaraná Lata",
+          quantidade: 0,
+          preco: 5.0,
         },
         {
-          "nome": "Suco Maracujá 300ml",
-          "quantidade": 0,
-          "preco": 5.0
+          nome: "Coca Cola 600ml",
+          quantidade: 0,
+          preco: 7.0,
         },
         {
-          "nome": "Coca Cola 1L",
-          "quantidade": 0,
-          "preco": 9.0
+          nome: "Suco Acerola 300ml",
+          quantidade: 0,
+          preco: 4.0,
+        },
+        {
+          nome: "Suco Goiaba 300ml",
+          quantidade: 0,
+          preco: 4.0,
+        },
+        {
+          nome: "Suco Maracujá 300ml",
+          quantidade: 0,
+          preco: 5.0,
+        },
+
+        {
+          nome: "Vitamina Maracujá 300ml",
+          quantidade: 0,
+          preco: 9.0,
+        },
+        {
+          nome: "Vitamina Acerola 300ml",
+          quantidade: 0,
+          preco: 8.0,
+        },
+        {
+          nome: "Vitamina Goiaba 300ml",
+          quantidade: 0,
+          preco: 8.0,
+        },
+        {
+          nome: "Coca Cola 1L",
+          quantidade: 0,
+          preco: 9.0,
+        },
+        {
+          nome: "Coca Cola Zero 1L",
+          quantidade: 0,
+          preco: 10.0,
+        },
+        {
+          nome: "Guaraná 1L",
+          quantidade: 0,
+          preco: 8.0,
+        },
+        {
+          nome: "Pepsi 1L",
+          quantidade: 0,
+          preco: 8.0,
         },
       ],
-    })
+    });
 
     function salvarPedido() {
-      carrinho.bebidas.push(Bebidas.value)
+      carrinho.bebidas.push(Bebidas.value);
 
-      router.push("/")
+      router.push("/");
 
       toast.success("Adicionado com sucesso!", {
         timeout: 2000,
         position: "top-right",
         icon: false,
         showCloseButtonOnHover: true,
-      })
+      });
     }
 
     function voltar() {
-      router.push("/")
+      router.push("/");
     }
 
     return {
       Bebidas,
       salvarPedido,
       voltar,
-    }
+    };
   },
-}
+};
 </script>
 
 <template>
@@ -102,13 +148,18 @@ export default {
       <div v-for="(item, index) in Bebidas.tipos" :key="item">
         <button class="botao1" @click="item.quantidade++">+</button>
 
-        <button v-if="item.quantidade > 0" class="botao2" @click="item.quantidade--">
+        <button
+          v-if="item.quantidade > 0"
+          class="botao2"
+          @click="item.quantidade--"
+        >
           -
         </button>
 
-        <label style="pointer-events: none" id="nomeItem" for="adicional"><span id="quantidadeDiv">{{ item.quantidade
-            }}x</span>
-          {{ item.nome }}</label>
+        <label style="pointer-events: none" id="nomeItem" for="adicional"
+          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
+          {{ item.nome }}</label
+        >
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens"></p>
         <br />
@@ -134,12 +185,12 @@ export default {
 
 #quantidadeDiv {
   font-weight: bold;
-  color: #F25430;
+  color: #f25430;
   font-size: 20px;
 }
 
 #textDividers {
-  color: #F25430;
+  color: #f25430;
   font-family: "Harrison-Rough";
   text-transform: uppercase;
   font-size: 40px;
@@ -167,7 +218,7 @@ export default {
 }
 
 .botao1 {
-  background-color: #F25430;
+  background-color: #f25430;
   color: #000000;
   border: none;
   padding: 5px 10px;
@@ -182,7 +233,7 @@ export default {
 }
 
 .botao2 {
-  background-color: #F25430;
+  background-color: #f25430;
   color: #000000;
   border: none;
   padding: 5px 10px;

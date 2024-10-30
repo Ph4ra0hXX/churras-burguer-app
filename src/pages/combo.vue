@@ -13,32 +13,26 @@ export default {
     const Burger = ref({
       Pao: [
         {
-          nome: "Batata Recheda de Frango",
-          preco: 13.0,
+          nome: "Burguer Misto + Batata + Refrigerante",
+          preco: 23.0,
           quantidade: 0,
           descricao:
-            "BATATA COZIDA, TRINCHADO DE FRANGO, REQUEIJÃO OU CHEDDAR, TOMATE, CEBOLA E CHEIRO VERDE.",
+            "PÃO BOLA SELADO NA MANTEIGA, ALFACE, TOMATE, HAMBÚRGUER TRADICIONAL, PRESUNTO, MUÇARELA.",
         },
         {
-          nome: "Batata Recheda de Carne",
-          preco: 15.0,
+          nome: "Burguer Carne Especial + Batata + Refrigerante",
+          preco: 29.0,
           quantidade: 0,
           descricao:
-            "BATATA COZIDA, CARNE DE SOL DESFIADA, REQUEIJÃO OU CHEDDAR, TOMATE, CEBOLA E CHEIRO VERDE.",
+            "PÃO BRIOCHE SELADO NA MANTEIGA, ALFACE, TOMATE, HAMBÚRGUER CASEIRO, MUÇARELA, BACON E OVO.",
         },
-      ],
-      Adicionais: [
-        { nome: "Filé de Frango Trinchado", preco: 5.0, quantidade: 0 },
-        { nome: "Calabresa", preco: 3.0, quantidade: 0 },
-        { nome: "Boi Trinchado", preco: 8.0, quantidade: 0 },
-        { nome: "Presunto Peru", preco: 2.5, quantidade: 0 },
-        { nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
-        { nome: "Batata Palha", preco: 1.5, quantidade: 0 },
-        { nome: "Queijo Mussarela", preco: 2.5, quantidade: 0 },
-        { nome: "Milho Verde", preco: 1.0, quantidade: 0 },
-        { nome: "Queijo Cheddar", preco: 3.0, quantidade: 0 },
-        { nome: "Queijo Coalho", preco: 2.0, quantidade: 0 },
-        { nome: "Bacon", preco: 3.0, quantidade: 0 },
+        {
+          nome: "Burguer Frango Especial + Batata + Refrigerante",
+          preco: 27.0,
+          quantidade: 0,
+          descricao:
+            "PÃO ÁRABE SELADO NA MANTEIGA, ALFACE, TOMATE, FILÉ DE FRANGO TRINCHADO, BACON E OVO.",
+        },
       ],
     });
 
@@ -61,15 +55,7 @@ export default {
       router.push("/");
     }
 
-    function updateQuantities(selectedItem) {
-      this.Burger.Pao.forEach((item) => {
-        if (item === selectedItem) {
-          item.quantidade = 1;
-        } else {
-          item.quantidade = 0;
-        }
-      });
-    }
+    function updateQuantities(selectedItem) {}
 
     return {
       Burger,
@@ -86,7 +72,7 @@ export default {
     <div id="listar">
       <div class="dotted-line">
         <hr />
-        <span id="textDividers">Batata Recheda</span>
+        <span id="textDividers">COMBOS</span>
         <hr />
       </div>
       <div v-for="(item, index) in Burger.Pao" :key="item">
@@ -111,30 +97,6 @@ export default {
         >
         <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
         <p id="itens">{{ item.descricao }}</p>
-        <br />
-      </div>
-      <div class="dotted-line">
-        <hr />
-        <span id="textDividers">Adicionais</span>
-        <hr />
-      </div>
-      <div v-for="(item, index) in Burger.Adicionais" :key="item">
-        <button class="botao1" @click="item.quantidade++">+</button>
-
-        <button
-          v-if="item.quantidade > 0"
-          class="botao2"
-          @click="item.quantidade--"
-        >
-          -
-        </button>
-
-        <label style="pointer-events: none" id="nomeItem" for="adicional"
-          ><span id="quantidadeDiv">{{ item.quantidade }}x</span>
-          {{ item.nome }}</label
-        >
-        <label id="preco">R$: {{ item.preco.toFixed(2) }}</label>
-        <p id="itens"></p>
         <br />
       </div>
 
