@@ -95,20 +95,9 @@ export default {
       router.push("/");
     }
 
-    function updateQuantities(selectedItem) {
-      this.Burger.Pao.forEach((item) => {
-        if (item === selectedItem) {
-          item.quantidade = 1;
-        } else {
-          item.quantidade = 0;
-        }
-      });
-    }
-
     return {
       Burger,
       salvarPedido,
-      updateQuantities,
       voltar,
     };
   },
@@ -124,12 +113,7 @@ export default {
         <hr />
       </div>
       <div v-for="(item, index) in Burger.Pao" :key="item">
-        <button
-          class="botao1"
-          @click="item.quantidade++, updateQuantities(item)"
-        >
-          +
-        </button>
+        <button class="botao1" @click="item.quantidade++">+</button>
 
         <button
           v-if="item.quantidade > 0"
