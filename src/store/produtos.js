@@ -113,7 +113,7 @@ export const produtosStore = defineStore("produto", {
             "domingo",
           ],
         },
-        {
+       /* {
           id: 2,
           nome: "PRATOS ESPECIAIS",
           img: "food12.webp",
@@ -128,7 +128,7 @@ export const produtosStore = defineStore("produto", {
             "sábado",
             "domingo",
           ],
-        },
+        },*/
         {
           id: 6,
           nome: "PORÇÕES",
@@ -235,7 +235,7 @@ export const produtosStore2 = defineStore("produto2", {
             "domingo",
           ],
         },
-        {
+       /* {
           id: 2,
           nome: "PRATOS ESPECIAIS",
           img: "food12.webp",
@@ -250,7 +250,7 @@ export const produtosStore2 = defineStore("produto2", {
             "sábado",
             "domingo",
           ],
-        },
+        },*/
         {
           id: 6,
           nome: "PORÇÕES",
