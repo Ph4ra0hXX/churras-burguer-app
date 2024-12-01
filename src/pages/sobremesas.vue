@@ -26,13 +26,13 @@ export default {
           descricao:
             "Pão brioche selado na manteiga, alface, tomate, hambúrguer caseiro, muçarela, bacon e ovo.",
         },
-        {
+        /*{
           nome: "Burguer Frango Especial",
           preco: 14.0,
           quantidade: 0,
           descricao:
             "Pão árabe selado na manteiga, alface, tomate, filé de frango trinchado, bacon e ovo.",
-        },
+        },*/
         {
           nome: "Burguer Fitness",
           preco: 9.0,
