@@ -12,7 +12,7 @@ export default {
 
     const Burger = ref({
       Pao: [
-        /*{ nome: "Pão Árabe", preco: 3.0, quantidade: 0 },*/
+        { nome: "Pão Árabe", preco: 3.0, quantidade: 0 },
         { nome: "Pão Bola", preco: 2.5, quantidade: 0 },
         { nome: "Pão Brioche", preco: 3.5, quantidade: 0 },
         { nome: "Pão Integral", preco: 5.0, quantidade: 0 },
