@@ -22,7 +22,7 @@ export default {
         { nome: "Hambúrguer Caseiro", preco: 7.0, quantidade: 0 },
         { nome: "Filé de Frango Trinchado", preco: 5.0, quantidade: 0 },
         { nome: "Boi Trinchado", preco: 8.0, quantidade: 0 },
-        { nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
+        //{ nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
         { nome: "Queijo Mussarela", preco: 2.5, quantidade: 0 },
         { nome: "Queijo Cheddar", preco: 3.0, quantidade: 0 },
         { nome: "Queijo Coalho", preco: 2.0, quantidade: 0 },

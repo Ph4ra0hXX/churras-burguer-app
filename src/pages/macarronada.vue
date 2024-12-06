@@ -12,13 +12,13 @@ export default {
 
     const Burger = ref({
       Pao: [
-        {
+        /* {
           nome: "Cuscuz Misturadão",
           preco: 10.0,
           quantidade: 0,
           descricao:
             "Acompanha: Carne de sol desfiada, bacon, calabresa, tomate, cebola e cheiro verde.",
-        },
+        },*/
 
         {
           nome: "Vatapá",
@@ -74,7 +74,7 @@ export default {
         { nome: "Calabresa", preco: 3.0, quantidade: 0 },
         { nome: "Boi Trinchado", preco: 8.0, quantidade: 0 },
         { nome: "Presunto Peru", preco: 2.5, quantidade: 0 },
-        { nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
+        //{ nome: "Carne de Sol Desfiada", preco: 5.0, quantidade: 0 },
         { nome: "Batata Palha", preco: 1.5, quantidade: 0 },
         { nome: "Queijo Mussarela", preco: 2.5, quantidade: 0 },
         { nome: "Milho Verde", preco: 1.0, quantidade: 0 },
