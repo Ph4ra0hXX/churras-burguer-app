@@ -38,12 +38,12 @@ export default {
           quantidade: 0,
           descricao: "Acompanha: Arroz e batata palha.",
         },
-        {
+       /* {
           nome: "Escondidinho de Carne de Sol.",
           preco: 15.0,
           quantidade: 0,
           descricao: "Acompanha: Arroz e batata palha.",
-        },
+        },*/
         {
           nome: "Fricassê de Frango.",
           preco: 15.0,
