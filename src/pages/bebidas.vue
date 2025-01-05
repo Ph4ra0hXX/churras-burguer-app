@@ -63,35 +63,35 @@ export default {
           preco: 7.0,
         },
         {
-          nome: "Suco Acerola 300ml",
-          quantidade: 0,
-          preco: 4.0,
-        },
-        {
-          nome: "Suco Goiaba 300ml",
-          quantidade: 0,
-          preco: 4.0,
-        },
-        {
-          nome: "Suco Maracujá 300ml",
+          nome: "Suco Acerola 400ml",
           quantidade: 0,
           preco: 5.0,
         },
+        {
+          nome: "Suco Goiaba 400ml",
+          quantidade: 0,
+          preco: 5.0,
+        },
+        {
+          nome: "Suco Maracujá 400ml",
+          quantidade: 0,
+          preco: 7.0,
+        },
 
         {
-          nome: "Vitamina Maracujá 300ml",
+          nome: "Vitamina Maracujá 400ml",
+          quantidade: 0,
+          preco: 10.0,
+        },
+        {
+          nome: "Vitamina Acerola 400ml",
           quantidade: 0,
           preco: 9.0,
         },
         {
-          nome: "Vitamina Acerola 300ml",
+          nome: "Vitamina Goiaba 400ml",
           quantidade: 0,
-          preco: 8.0,
-        },
-        {
-          nome: "Vitamina Goiaba 300ml",
-          quantidade: 0,
-          preco: 8.0,
+          preco: 9.0,
         },
         {
           nome: "Coca Cola 1L",
