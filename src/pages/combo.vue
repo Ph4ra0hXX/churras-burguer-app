@@ -14,21 +14,21 @@ export default {
       Pao: [
         {
           nome: "Burguer Misto + Batata + Refrigerante",
-          preco: 23.0,
+          preco: 25.0,
           quantidade: 0,
           descricao:
             "Pão bola selado na manteiga, alface, tomate, hambúrguer tradicional, presunto, muçarela.",
         },
         {
           nome: "Burguer Carne Especial + Batata + Refrigerante",
-          preco: 29.0,
+          preco: 32.0,
           quantidade: 0,
           descricao:
             "Pão brioche selado na manteiga, alface, tomate, hambúrguer caseiro, muçarela, bacon e ovo.",
         },
         {
           nome: "Burguer Frango Especial + Batata + Refrigerante",
-          preco: 27.0,
+          preco: 27.5,
           quantidade: 0,
           descricao:
             "Pão árabe selado na manteiga, alface, tomate, filé de frango trinchado, bacon e ovo.",

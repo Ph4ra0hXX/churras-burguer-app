@@ -14,19 +14,19 @@ export default {
       Pao: [
         {
           nome: "Filé de Frango Trinchado",
-          preco: 20.0,
+          preco: 23.0,
           quantidade: 0,
           descricao: "Acompanha: batata frita e arroz.",
         },
         {
           nome: "Boi Trinchado",
-          preco: 28.0,
+          preco: 29.0,
           quantidade: 0,
           descricao: "Acompanha: batata frita e arroz.",
         },
         {
           nome: "Batata Frita",
-          preco: 12.0,
+          preco: 14.0,
           quantidade: 0,
           descricao: "-",
         },
@@ -50,13 +50,13 @@ export default {
         },
         {
           nome: "Boi Trinchado Acebolado - 100g",
-          preco: 11.0,
+          preco: 13.0,
           quantidade: 0,
           descricao: "(Pedido mínimo: 200g)",
         },
         {
           nome: "Frango Trinchado Acebolado - 100g",
-          preco: 8.0,
+          preco: 9.0,
           quantidade: 0,
           descricao: "(Pedido mínimo: 200g)",
         },

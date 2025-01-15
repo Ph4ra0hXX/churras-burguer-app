@@ -30,27 +30,27 @@ export default {
         {
           nome: "Coca Lata",
           quantidade: 0,
-          preco: 5.0,
+          preco: 6.0,
         },
         {
           nome: "Coca Zero Lata",
           quantidade: 0,
-          preco: 5.0,
+          preco: 6.0,
         },
         {
           nome: "Fanta Laranja Lata",
           quantidade: 0,
-          preco: 5.0,
+          preco: 6.0,
         },
         {
           nome: "Uva Lata",
           quantidade: 0,
-          preco: 5.0,
+          preco: 6.0,
         },
         {
           nome: "Guaraná Lata",
           quantidade: 0,
-          preco: 5.0,
+          preco: 6.0,
         },
         {
           nome: "Cajuína Lata",
@@ -68,6 +68,11 @@ export default {
           preco: 5.0,
         },
         {
+          nome: "Suco Manga 400ml",
+          quantidade: 0,
+          preco: 5.0,
+        },
+        {
           nome: "Suco Goiaba 400ml",
           quantidade: 0,
           preco: 5.0,
@@ -77,9 +82,18 @@ export default {
           quantidade: 0,
           preco: 7.0,
         },
-
+        {
+          nome: "Suco Graviola 400ml",
+          quantidade: 0,
+          preco: 7.0,
+        },
         {
           nome: "Vitamina Maracujá 400ml",
+          quantidade: 0,
+          preco: 10.0,
+        },
+        {
+          nome: "Vitamina Graviola 400ml",
           quantidade: 0,
           preco: 10.0,
         },
@@ -90,6 +104,11 @@ export default {
         },
         {
           nome: "Vitamina Goiaba 400ml",
+          quantidade: 0,
+          preco: 9.0,
+        },
+        {
+          nome: "Vitamina Manga 400ml",
           quantidade: 0,
           preco: 9.0,
         },
@@ -106,12 +125,12 @@ export default {
         {
           nome: "Guaraná 1L",
           quantidade: 0,
-          preco: 8.0,
+          preco: 9.0,
         },
         {
           nome: "Pepsi 1L",
           quantidade: 0,
-          preco: 8.0,
+          preco: 9.0,
         },
       ],
     });

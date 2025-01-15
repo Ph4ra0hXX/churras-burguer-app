@@ -14,30 +14,37 @@ export default {
       Pao: [
         {
           nome: "Burguer Misto",
-          preco: 10.0,
+          preco: 12.0,
           quantidade: 0,
           descricao:
             "Pão bola selado na manteiga, alface, tomate, hambúrguer tradicional, presunto, muçarela.",
         },
         {
           nome: "Burguer Carne Especial",
-          preco: 16.0,
+          preco: 19.0,
           quantidade: 0,
           descricao:
             "Pão brioche selado na manteiga, alface, tomate, hambúrguer caseiro, muçarela, bacon e ovo.",
         },
         {
           nome: "Burguer Frango Especial",
-          preco: 14.0,
+          preco: 14.5,
           quantidade: 0,
           descricao:
             "Pão árabe selado na manteiga, alface, tomate, filé de frango trinchado, bacon e ovo.",
         },
         {
           nome: "Burguer Fitness",
-          preco: 9.0,
+          preco: 11.0,
           quantidade: 0,
           descricao: "Pão integral, alface, tomate, filé de frango trinchado.",
+        },
+        {
+          nome: "Burguer Fitness / Ovo",
+          preco: 13.0,
+          quantidade: 0,
+          descricao:
+            "Pão integral, alface, tomate, ovo e filé de frango trinchado.",
         },
       ],
     });
